@@ -1224,8 +1224,8 @@ td:focus, th:focus{
   outline:none !important}
 
 /* line 1033, H:/admin_project/hospital/scss/_reset.scss */
-.mb_20{
-  margin-bottom:20px}
+/* .mb_20{
+  margin-bottom:20px} */
 
 /* line 1036, H:/admin_project/hospital/scss/_reset.scss */
 .mr_10{
@@ -1560,6 +1560,7 @@ td:focus, th:focus{
 
 /* line 1323, H:/admin_project/hospital/scss/_reset.scss */
 .cs_modal .modal-body .pass_forget_btn{
+  cursor:pointer;
   color:#707070;
   margin-top:20px;
   font-size:16px;
@@ -2134,16 +2135,16 @@ p a:hover{
 .dropdown .dropdown-menu{
   border:0;
   border:1px solid #eee1e2;
-  padding:12px 0 20px 0;
+  padding:12px 0 16px 0;
   margin:0;
   border-radius:0 !important}
 
 /* line 351, H:/admin_project/hospital/scss/_button.scss */
 .dropdown .dropdown-menu .dropdown-item{
-  font-size:12px;
+  font-size:13px;
   font-weight:300;
-  padding:4px 20px;
-  color:#7f7778}
+  padding:5px 20px;
+  color:#555}
 
 /* line 356, H:/admin_project/hospital/scss/_button.scss */
 .dropdown .dropdown-menu .dropdown-item:hover{
@@ -2522,7 +2523,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
 .profile_info .profile_info_iner{
   position:absolute;
   right:0;
-  background-color:#2E4765;
+  background-color:rgb(207 233 236 /0.5);
   text-align:right;
   width:215px;
   padding:30px 30px 20px;
@@ -2542,10 +2543,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
   width:0;
   height:0;
   border-style:solid;
-  top:-14px;
-  right:10px;
-  border-width:0 15px 20px 15px;
-  border-color:transparent transparent #2E4765 transparent}
+  top:-15px;
+  right:15px;
+  border-width:0 15px 15px 15px;
+  border-color:transparent transparent rgb(207 233 236 /0.5) transparent}
 
 /* line 216, H:/admin_project/hospital/scss/_header.scss */
 .profile_info .profile_info_iner a{
@@ -2553,19 +2554,19 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
 
 /* line 220, H:/admin_project/hospital/scss/_header.scss */
 .profile_info .profile_info_iner p{
-  font-size:12px;
-  font-weight:300}
+  font-size:14px;
+  font-weight:300;
+  color:#25a0ad}
 
 /* line 224, H:/admin_project/hospital/scss/_header.scss */
-.profile_info .profile_info_iner h5{
+/* .profile_info .profile_info_iner h5{
   font-size:12px;
-  color:#fff}
+  color:#fff} */
 
 /* line 230, H:/admin_project/hospital/scss/_header.scss */
 .profile_info:hover .profile_info_iner{
   opacity:1;
-  visibility:visible;
-  top:77px}
+  visibility:visible}
 
 /* line 236, H:/admin_project/hospital/scss/_header.scss */
 .profile_info .profile_info_details{
@@ -2575,24 +2576,22 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
 
 /* line 240, H:/admin_project/hospital/scss/_header.scss */
 .profile_info .profile_info_details a{
-  color:#fff;
-  font-size:13px;
-  display:block;
+  color:#000;
+  font-size:14px;
+  display:inline-flex;
+  line-height:25px;
   padding:10px 0}
 
 /* line 245, H:/admin_project/hospital/scss/_header.scss */
-.profile_info .profile_info_details a:hover{
-  color:#fff}
-
-/* line 247, H:/admin_project/hospital/scss/_header.scss */
+.profile_info .profile_info_details a:hover,
 .profile_info .profile_info_details a:hover i{
-  color:#fff}
+  color:#25a0ad}
 
 /* line 252, H:/admin_project/hospital/scss/_header.scss */
 .profile_info .profile_info_details i{
-  color:#cccccc;
-  font-size:12px;
-  margin-left:20px;
+  /* color:#cccccc; */
+  font-size:20px;
+  margin-left:15px;
   -webkit-transition:0.5s;
   transition:0.5s}
 
@@ -6830,4 +6829,28 @@ td.p30{
   white-space:nowrap}
 .text-cap{
   text-transform:capitalize}
+
+
+/* Toggle Password */
+[name="password"]{
+  padding-right:40px !important}
+[name="password"] + span{
+  position:absolute;
+  margin-top:-55px;
+  right:30px}
+@media (max-width:575.98px){
+  [name="password"] + span{
+    right:20px}
+}
+[name="password"] + span .material-iconsremove_red_eye{
+  padding:10px}
+[name="password"] + span .material-iconsremove_red_eye.closed:after {
+  content:"";
+  width:1px;
+  height:22px;
+  transform:rotate(-40deg);
+  background-color:#000;
+  box-shadow:0 0 0 2px #fff;
+  position:absolute;
+  right:22px}
 /*# sourceMappingURL=style.css.map */

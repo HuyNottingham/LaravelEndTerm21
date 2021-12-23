@@ -108,7 +108,8 @@
                 <td>{{$row->quantity}}</td>
                 <td>{{number_format($row->total)." VNĐ"}}</td>
                 <td class="align-j">
-                  <a href="updateorderdetails/{{$row->id}}">Sửa</a>
+                  <a href="#" title="Chua phat trien">Sửa</a>
+                  <!-- updateorderdetails/{ {$row->id}} -->
                   <a href="deleteorderdetails/{{$row->id}}" onclick="return confirm('Bạn muốn xóa {{$row->name}} ?')">Xóa</a>
                 </td>
               </tr>
@@ -123,6 +124,9 @@
 
 @section('script')
 <script>
+  <?php if(session('msg'))
+    echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
+
   function status(status, id) {
     if (status==0)
       location.assign("deleteorder/"+id);

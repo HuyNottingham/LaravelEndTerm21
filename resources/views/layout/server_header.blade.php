@@ -11,7 +11,7 @@
                 <div class="search_field">
                   <input type="text" placeholder="Search here..." >
                 </div>
-                <button type="submit"> <img src="{{asset('img')}}/icon/icon_search.svg" alt=""> </button>
+                <button type="submit" disabled> <img src="{{asset('img')}}/icon/icon_search.svg" alt=""> </button>
               </form>
             </div>
           </div>
@@ -25,14 +25,14 @@
             </li>
           </div>
           <div class="profile_info">
-            <img src="{{asset('img')}}/client_img.png" alt="#">
+            <img src="{{asset('img/staff/'.$_COOKIE['admin_avatar'])}}" alt="Avatar">
             <div class="profile_info_iner">
-              <p>Neurologist </p>
-              <h5>Dr. Robar Smith</h5>
+              <p>{{$_COOKIE['admin_position']}}</p>
+              <h4>{{$_COOKIE['admin_name']}}</h4>
               <div class="profile_info_details">
-                <a href="#">My Profile <i class="ti-user"></i></a>
-                <a href="#">Settings <i class="ti-settings"></i></a>
-                <a href="#">Log Out <i class="ti-shift-left"></i></a>
+                <a href="#">Hồ sơ <i class="ti-user"></i></a>
+                <a href="#">Cài đặt <i class="ti-settings"></i></a>
+                <a href="{{route('adminlogout')}}">Đăng xuất <i class="ti-shift-left"></i></a>
               </div>
             </div>
           </div>

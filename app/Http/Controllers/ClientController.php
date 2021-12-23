@@ -13,11 +13,12 @@ use App\Models\Order;
 use App\Models\OrderDetails;
 use App\Models\User;
 use App\Models\Size;
-use App\Mail\Contact;
-use App\Mail\NewOrder;
+
+// use App\Mail\Contact;
+// use App\Mail\NewOrder;
 // use Mail;
 
-class Controllerr extends Controller{
+class ClientController extends Controller{
     function i(){
         if (!isset($_COOKIE['id'])) {
             header('Location: login');
@@ -111,16 +112,5 @@ class Controllerr extends Controller{
             // thay 'send' bằng 'queue' để đặt vào hàng chờ (phải cấu hình trước khi dùng)
         $msg='Phản hồi đã được gửi đi.\nChúng tôi sẽ xử lý nó trong thời gian sớm nhất.\nThân ái!';
         return redirect()->route('home')->with('msg', $msg);
-        }
-
-
-
-    function admin(){
-        // $users = User::count('id');
-        // $products = Product::sum('quantity');
-        // $orders = Order::count('id');
-        // $orders2 = OrderDetails::sum('quantity');
-        // return view('server.index', compact('users', 'products', 'orders', 'orders2'));
-        return view('server.index');
         }
 }

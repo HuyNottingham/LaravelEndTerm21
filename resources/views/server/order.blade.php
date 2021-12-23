@@ -44,7 +44,7 @@
         </thead>
         <tbody>
           @foreach($order as $row)
-          <tr onclick="details({{$row->id}})">
+          <tr>
             <td class="nowrap">{{$row->date}}</td>
             <td class="nowrap">{{number_format($row->total)." VNĐ"}}</td>
             <td>{{$row->name}}</td>
@@ -52,14 +52,25 @@
             <td>{{$row->address}}</td>
             <td>{{$row->phone}}</td>
             <td>
-              <select onchange="status(this.value, {{$row->id}})" class="form-control p0">
-                @foreach($status as $sta)
-                  <option value="{{$sta->id}}"<?php
-                    if($sta->id==$row->status) echo " selected"?>>
-                    {{$sta->status}}</option>
-                @endforeach
-                  <option value="0">Hủy</option>
-              </select>
+              <div class="d-flex align-items-center">
+                <select onchange="status(this.value, {{$row->id}})" class="form-control p0">
+                  @foreach($status as $sta)
+                    <option value="{{$sta->id}}"<?php
+                      if($sta->id==$row->status) echo " selected"?>>
+                      {{$sta->status}}</option>
+                  @endforeach
+                </select>
+                <div class="dropdown ml-3">
+                  <a class=" dropdown-toggle hide_pils" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="orderdetails/{{$row->id}}">Xem chi tiết</a>
+                    <a class="dropdown-item" href="deleteorder/{{$row->id}}" onclick="return confirm('Bạn chắc chứ?')">Xóa đơn</a>
+                  </div>
+                </div>
+              </div>
             </td>
           </tr>
           @endforeach
@@ -72,15 +83,11 @@
 
 @section('script')
 <script>
-  function details(id){
-    location.assign('orderdetails/'+id);
-    }
+  <?php if(session('msg'))
+    echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
 
   function status(status, id) {
-    if (status==0)
-      location.assign("deleteorder/"+id);
-    else
-      location.assign("updateorder/"+id+"/"+status);
+    location.assign("updateorder/"+id+"/"+status);
     }
 </script>
 @endsection

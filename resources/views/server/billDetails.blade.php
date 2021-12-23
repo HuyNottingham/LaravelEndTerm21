@@ -109,6 +109,9 @@
 
 @section('script')
 <script>
+  <?php if(session('msg'))
+    echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
+
   function status(status, id) {
     if (status==0)
       location.assign("deleteorder/"+id);

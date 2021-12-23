@@ -59,8 +59,8 @@
 
 @section('script')
 <script>
-  // < ?php if(session('msg'))
-  //   echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
+  <?php if(session('msg'))
+    echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
 
   function add(){
     var name = document.forms[1].name.value;
@@ -86,7 +86,7 @@
     if (pass2!=pass){
       alert('Mật khẩu không bắt buộc nhưng nhập lại phải khớp!');
       document.forms[1].repassword.focus();
-      return}
+      return false}
     document.forms[1].submit();
     }
 

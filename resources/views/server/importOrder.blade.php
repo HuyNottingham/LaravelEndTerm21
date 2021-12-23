@@ -42,18 +42,18 @@
           </tr>
         </thead>
         <tbody>
-          @for($i=0;$i<=5;$i++)
+          <!-- @ foreach($order as $row) -->
           <tr>
-            <td>2021-10-11</td>
-            <td>Hermers</td>
-            <td>Printed Monogram Tie-dye Denim Shirt</td>
-            <td>XXXXXL</td>
-            <td>Hermers</td>
-            <td>173,000,000 VNĐ</td>
-            <td>5</td>
-            <td>173,000,000 VNĐ</td>
+            <td>{ {$row->date}}</td>
+            <td>{ {$row->partner}}</td>
+            <td>{ {$row->name}}</td>
+            <td>{ {$row->size}}</td>
+            <td>{ {$row->brand}}</td>
+            <td>{ {number_format($row->price)}} VNĐ</td>
+            <td>{ {$row->quanity}}</td>
+            <td>{ {number_format($row->total)}} VNĐ</td>
           </tr>
-          @endfor
+          <!-- @ endfor -->
         </tbody>
       </table>
     </div>
@@ -62,4 +62,8 @@
 @endsection
 
 @section('script')
+<script>
+  <?php if(session('msg'))
+    echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
+</script>
 @endsection

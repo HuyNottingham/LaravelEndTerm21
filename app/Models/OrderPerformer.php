@@ -3,13 +3,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ImportOrder extends Model{
+class OrderPerformer extends Model{
     use HasFactory;
-    protected $table = 'importorder';
+    protected $table = 'orderperformer';
     protected $fillable = [
         'id',
-        'date',
-        'partner',
-        'status'
+        'staff_id',
+        'order_id'
     ];
 }

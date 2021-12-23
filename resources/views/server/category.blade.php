@@ -43,7 +43,7 @@
               <input type="button" value="Them moi" onclick="submitt('post')" class="btn btn-outline-primary">
             </div>
             <div class="col-lg-4">
-              <input type="button" value="Huy" onclick="resett()" class="btn btn-outline-secondary">
+              <input type="button" value="Dat lai" onclick="resett()" class="btn btn-outline-secondary">
             </div>
           </div>
         </form>
@@ -125,7 +125,7 @@
         document.querySelector("tbody tr:nth-child("+stt+")").classList.remove('selected');
       stt = stt0;
     }
-    document.getElementById('btn').innerHTML='<div class="col-lg-12"><input type="button" value="Cap nhat" onclick="submitt('+ "'update'" +')" class="btn btn-outline-primary mb_10"></div><div class="col-lg-12"><input type="button" value="Them moi" onclick="submitt('+ "''" +')" class="btn btn-outline-success mb_10"></div><div class="col-lg-6"><input type="button" value="Xoa" onclick="if (confirm(' + "'Bạn có thực sự muốn xóa ?'"+')) submitt('+ "'delete'" +')" class="btn btn-outline-danger"></div><div class="col-lg-4"><input type="button" value="Huy" onclick="resett()" class="btn btn-outline-secondary"></div>';
+    document.getElementById('btn').innerHTML='<div class="col-lg-12"><input type="button" value="Cap nhat" onclick="submitt('+ "'update'" +')" class="btn btn-outline-primary mb_10"></div><div class="col-lg-12"><input type="button" value="Them moi" onclick="submitt('+ "''" +')" class="btn btn-outline-success mb_10"></div><div class="col-lg-6"><input type="button" value="Xoa" onclick="if (confirm(' + "'Bạn có thực sự muốn xóa ?'"+')) submitt('+ "'delete'" +')" class="btn btn-outline-danger"></div><div class="col-lg-4"><input type="button" value="Dat lai" onclick="resett()" class="btn btn-outline-secondary"></div>';
     document.querySelector('h5.modal-title').innerHTML='Cap nhat the loai';
     resett();
   }

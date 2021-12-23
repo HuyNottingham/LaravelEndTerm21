@@ -3,13 +3,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ImportOrder extends Model{
+class Position extends Model{
     use HasFactory;
-    protected $table = 'importorder';
+    protected $table = 'position';
     protected $fillable = [
         'id',
-        'date',
-        'partner',
-        'status'
+        'position',
+        'salary',
+        'bonus'
     ];
 }

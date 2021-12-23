@@ -68,14 +68,15 @@ class UserController extends Controller{
         if (isset($req->name)) {
             $model = new User();
             $model->fill($req->all());
+            $model->password = md5(md5(md5(md5($req->password))));
             if ($model->save())
                 $msg='Tạo tài khoản thành công !';
             else
                 $msg='Thao tác thất bại !';
         } else {
             $acc = User::where('email', $req->email)
-                ->where('password', $req->password)
-                        ->first();
+                    ->where('password', md5(md5(md5(md5($req->password)))))
+                    ->first();
             if ($acc==null)
                 $msg='Tài khoản đăng nhập không đúng !';
             else {

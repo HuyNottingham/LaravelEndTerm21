@@ -63,4 +63,8 @@
 @endsection
 
 @section('script')
+<script>
+  <?php if(session('msg'))
+    echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
+</script>
 @endsection

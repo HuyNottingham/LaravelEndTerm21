@@ -13,6 +13,8 @@ class BillController extends Controller{
 
     function details($id){
         $bill = BillView::find($id);
+        if ($bill==null)
+            return "yo wtf ?";
         $details = OrderDetailsView::where('order_id', $id)->get();
         return view('server.billdetails', compact('bill','details'));
         }

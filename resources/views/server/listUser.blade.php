@@ -70,10 +70,7 @@
 
 @section('script')
 <script>
-  < ?php if(session('msg')){ ?>
-    $(document).ready(function(){
-      alert("{{session('msg')}}");
-    });
-  < ?php } ?>
+  <?php if(session('msg'))
+    echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
 </script>
 @endsection

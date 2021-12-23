@@ -3,13 +3,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ImportOrder extends Model{
+class ReviewView extends Model{
     use HasFactory;
-    protected $table = 'importorder';
+    protected $table = 'reviewview';
     protected $fillable = [
         'id',
-        'date',
-        'partner',
-        'status'
+        'user_id',
+        'product_id',
+        'name',
+        'avatar',
+        'rate',
+        'review',
+        'date'
     ];
 }

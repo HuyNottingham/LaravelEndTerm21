@@ -1,3 +1,9 @@
+<?php
+if (!isset($_COOKIE['admin_id'])) {
+  header('Location: '.route("adminlogin"));
+  die();
+} ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +14,10 @@
 <body class="crm_body_bg">
 
 
-<!-- sidebar  -->
 @include("layout.server_sidebar")
 
 
 <section class="main_content dashboard_part">
-  <!-- menu  -->
   @include("layout.server_header")
 
   <div class="main_content_iner ">
@@ -37,9 +41,9 @@
   </div>
 </div>
 </section>
-<!-- main content part end -->
 
-<!-- footer  -->
+
+
 <!-- jquery slim -->
 <script src="{{asset('js')}}/jquery-3.4.1.min.js"></script>
 <!-- popper js -->
@@ -73,7 +77,6 @@
 <script src="{{asset('vendors')}}/datatable/js/buttons.html5.min.js"></script>
 <script src="{{asset('vendors')}}/datatable/js/buttons.print.min.js"></script>
 
-<script src="{{asset('js')}}/chart.min.js"></script>
 <!-- progressbar js -->
 <script src="{{asset('vendors')}}/progressbar/jquery.barfiller.js"></script>
 <!-- tag input -->
@@ -81,7 +84,6 @@
 <!-- text editor js -->
 <script src="{{asset('vendors')}}/text_editor/summernote-bs4.js"></script>
 
-<script src="{{asset('vendors')}}/apex_chart/apexcharts.js"></script>
 
 <!-- custom js -->
 <script src="{{asset('js')}}/custom.js"></script>

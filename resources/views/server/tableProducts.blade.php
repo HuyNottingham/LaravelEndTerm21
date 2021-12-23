@@ -8,7 +8,7 @@
     position:fixed;
     top:0;
     right:0;
-    padding-top:50px !important;
+    padding-top:21px !important;
     z-index:6;
     height:100%;
     background-color:rgb(0 0 0 /0.1);
@@ -114,6 +114,7 @@
 <script>
   <?php if(session('msg'))
     echo '$(document).ready(function(){ alert("'.session('msg').'");});'; ?>
+
   var id;
   function openn(id0, name) {
     id = id0;

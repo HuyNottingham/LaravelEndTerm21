@@ -1,22 +1,16 @@
 <?php
-
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+
+// use App\Models\Sex;
+// use App\Models\Category;
+// use App\Models\CartView;
 
 class AppServiceProvider extends ServiceProvider{
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
     public function register(){}
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
     public function boot(){
         // if (!isset($_COOKIE['id'])) {
         //     return view('login');
