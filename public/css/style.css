@@ -2887,11 +2887,11 @@ table.dataTable{
   object-fit:contain;
 }
 
-@media (max-width:991px){
-  /* line 37, H:/admin_project/hospital/scss/_sidebar.scss */
+/* @media (max-width:991px){
+  /* line 37, H:/admin_project/hospital/scss/_sidebar.scss
   .sidebar .logo{
     padding:30px}
-}
+} */
 
 /* line 52, H:/admin_project/hospital/scss/_sidebar.scss */
 .sidebar .single_sidebar_tittle i{
