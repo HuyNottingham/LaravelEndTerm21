@@ -17,6 +17,10 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Clothing">
   <meta name="twitter:description" content="Free Shipping for standard order over $100">
+  <style>
+    .type_toolbar_filter {
+      display:block !important}
+  </style>
 @endsection
 
 
@@ -69,7 +73,7 @@
         </div>
 
         <div class="dn dev_tablet dev_view_cat">
-          <a rel="nofollow" data-link="{{route('productdetails')}}?"
+          <a rel="nofollow" data-link="{{route('details',['id'=>1])}}?"
             data-no-instant data-dev="tb" data-col="listt4"
             class="pr mr__10 cat_view_page view_list"></a>
           <a rel="nofollow" data-no-instant data-dev="tb" data-col="6"
@@ -80,7 +84,7 @@
             class="pr cat_view_page view_3"></a>
         </div>
         <div class="flex dev_mobile dev_view_cat">
-          <a rel="nofollow" data-link="{{route('shop')}}?" data-no-instant data-dev="mb"
+          <a rel="nofollow" data-link="?" data-no-instant data-dev="mb"
             data-col="listt4" class="pr mr__10 cat_view_page view_list"></a>
           <a rel="nofollow" data-no-instant data-dev="mb" data-col="12"
             class="pr mr__10 cat_view_page view_12"></a>
@@ -100,14 +104,14 @@
           <div class="h3 mg__0 tc cd tu ls__2 dn_lg db">
             Sắp xếp<i class="pegk pe-7s-close fs__50 ml__5"></i></div>
           <div class="nt_ajaxsortby wrap_sortby">
-            <a class="truncate selected" href="{{route('shop')}}?sort_by=manual">Nổi bật</a>
-            <a class="truncate" href="{{route('shop')}}?sort_by=best-selling">Bán chạy nhất</a>
-            <a class="truncate" href="{{route('shop')}}?sort_by=title-ascending">Theo tên, A-Z</a>
-            <a class="truncate" href="{{route('shop')}}?sort_by=title-descending">Theo tên, Z-A</a>
-            <a class="truncate" href="{{route('shop')}}?sort_by=price-ascending">Giá, thấp đến cao</a>
-            <a class="truncate" href="{{route('shop')}}?sort_by=price-descending">Giá, cao đến thấp</a>
-            <a class="truncate" href="{{route('shop')}}?sort_by=created-ascending">Ngày, cũ đến mới</a>
-            <a class="truncate" href="{{route('shop')}}?sort_by=created-descending">Ngày, mới tới cũ</a>
+            <a class="truncate selected" href="?sort_by=manual">Nổi bật</a>
+            <a class="truncate" href="?sort_by=best-selling">Bán chạy nhất</a>
+            <a class="truncate" href="?sort_by=title-ascending">Theo tên, A-Z</a>
+            <a class="truncate" href="?sort_by=title-descending">Theo tên, Z-A</a>
+            <a class="truncate" href="?sort_by=price-ascending">Giá, thấp đến cao</a>
+            <a class="truncate" href="?sort_by=price-descending">Giá, cao đến thấp</a>
+            <a class="truncate" href="?sort_by=created-ascending">Ngày, cũ đến mới</a>
+            <a class="truncate" href="?sort_by=created-descending">Ngày, mới tới cũ</a>
           </div>
         </div>
       </div>
@@ -121,7 +125,8 @@
           <div data-change-url data-attrsntt4='{"paginate_ntt4":"","limit_ntt4":"","use_bar_lmntt4":""}'
             data-filterntt4='{"paginate_ntt4":"default","limit_ntt4":"12","use_bar_lmntt4":"true"}'
             class="on_list_view_false products nt_products_holder row fl_center row_pr_1 cdt_des_1 round_cd_false nt_cover ratio_nt position_8 space_30 nt_default">
-            
+
+            <!-- @ foreach ($products as $row) { -->
             @for($i=0;$i<=0;$i++)
             <div data-page="1"
               class="col-lg-3 col-md-3 col-6 pr_animated done mt__30 pr_grid_item pr_list_item product nt_pr desgin__1">
@@ -133,7 +138,7 @@
                 <div class="product-info">
                   <div class="product-info__inner">
                     <h3 class="product-title pr fs__14 mg__0 fwm">
-                      <a href="{{route('productdetails')}}" class="cd chp"
+                      <a href="{{route('details',['id'=>1])}}" class="cd chp"
                         >Blue leggings</a></h3>
                     <span class="price dib mb__5">
                       <del><span class="money">$20.00</span></del>
@@ -147,11 +152,11 @@
                       data-include="{{route('products-view=swfalse')}}"></div>
                   </div>
                   <div class="product-info__btns flex column mt__20">
-                    <a href="{{route('productdetails')}}" data-id="5427725959325"
+                    <a href="{{route('quick_view')}}" data-id="5427725959325"
                       class="nt_add_qv js_add_qv dib ttip_nt_" rel="nofollow">
                       <span class="tt_txt">Xem nhanh</span>
                       <i class="iccl iccl-eye"></i></a>
-                    <a href="{{route('productdetails')}}" data-id="5427725959325" rel="nofollow"
+                    <a href="{{route('quick_shop')}}" data-id="5427725959325" rel="nofollow"
                       class="pr_atc pa l__0 r__0 b__0 op__0 pe_none tc dib js__qs ttip_nt_ truncate">
                       <span class="tt_txt">Mua ngay</span>
                       <i class="iccl iccl-cart"></i>
@@ -161,6 +166,7 @@
               </div>
             </div>
             @endfor
+            <!-- @ endforeach -->
 
           </div>
           <div class="products-footer tc mt__40 mb__60">
@@ -168,8 +174,8 @@
               <ul class="pagination-page page-numbers">
                 <!-- page 1 -->
                 <li><span class="page-numbers current">1</span></li>
-                <li><a class="page-numbers" href="{{route('shop')}}?page=2">2</a></li>
-                <li><a href="{{route('shop')}}?page=2" class="next page-numbers">Tiếp</a></li>
+                <li><a class="page-numbers" href="?page=2">2</a></li>
+                <li><a href="?page=2" class="next page-numbers">Tiếp</a></li>
 
                 <!-- page=2
                 <li><a class="prev page-numbers" href="/collections/clothing?page=1">Prev</a></li>
@@ -182,7 +188,10 @@
       </div>
     </div>
   </div>
-  <script>document.querySelector('body').classList.add("template-shop");</script>
+  <script>
+    document.querySelector('body').classList.add("template-shop");
+    setTimeout(()=>{document.querySelector('#shopify-section-toolbar_mobile .type_toolbar_shop').classList.add("dn")});
+  </script>
 @endsection
 
 

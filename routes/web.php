@@ -15,39 +15,38 @@ Route::post('/getmsg','ProductController@index');
 
 
 // - - - - - Client - - - - -
-    Route::get('/', function() {
-        return view('client.index');})->name('home');
+    Route::get('/', 'ClientController@i')->name('home');
     Route::get('login', function() {
         return view('client.login');})->name('login');
 
-    Route::post('login', function() {});
-    Route::get('regis', function() {
-        return view('client.regis');})->name('regis');
-    Route::post('regis', function() {})->name('regis');
-    Route::post('recover', function() {})->name('recover');
+    Route::post('login', 'UserController@login');
     Route::get('logout', function (){
-        // setcookie("id", "", time()-60, "/","", 0);
+        setcookie("id", "", time()-60, "/","", 0);
         return redirect()->route('login');} )->name('logout');
 
 
-    Route::get('shop', function() {
-        return view('client.shop');})->name('shop');
-    /**/Route::get('search', function() {
-        return view('client.search');})->name('search');
-    Route::get('productdetails', function() {
-        return view('client.product-details');})->name('productdetails');
+    Route::get('shop', 'ClientController@shop')->name('shop');
+    Route::get('search', 'ClientController@search')->name('search');
+    Route::get('details/{id}', 'ClientController@details')->name('details');
 
-    Route::get('cart', function() {
-        return view('client.cart');})->name('cart');
-    Route::get('wishlist', function() {
-        return view('client.wishlist');})->name('wishlist');
-    Route::get('checkout', function() {
-        return view('client.checkout');})->name('checkout');
+    Route::get('cart', "CartController@i")->name('cart');
+    Route::get('wishlist', "WishlistController@i")->name('wishlist');
+    Route::get('checkout', "ClientController@checkout")->name('checkout');
+
+    Route::get('cart/{id}', "CartController@add")->name('addcart');
+    Route::get('wishlist/{id}', "WishlistController@add")->name('addwishlist');
+    Route::get('deletecart/{id}', "CartController@delete")->name('deletecart');
+    Route::get('deletewishlist/{id}', "WishlistController@delete")->name('deletewishlist');
+    Route::post('cart', "CartController@update");
+    Route::post('wishlist', "WishlistController@update");
 
     Route::get('contact', function() {
         return view('client.contact');})->name('contact');
+    Route::post('contact', "ClientController@contact");
     Route::get('size-guide', function() {
         return view('client.size-guide');})->name('size-guide');
+    Route::get('size-guide-aj', function() {
+        return view('client.size-guide-aj');})->name('size-guide-aj');
     Route::get('privacy-policy', function() {
         return view('client.privacy-policy');})->name('privacy-policy');
     Route::get('terms-conditions', function() {
@@ -67,23 +66,23 @@ Route::post('/getmsg','ProductController@index');
 
     // Support
     Route::get('cartchange', function() {
-        return view('client.cart_change.js_id=');})->name('cartchange');
+        return view('client.cart_change.js_id=');})->name('cartchange'); //html
     Route::get('shop-gift_wrapping', function() {
         return view('client.shop-gift_wrapping');})->name('shop-gift_wrapping');
     Route::get('filter', function() {
         return view('client.shop-filter');})->name('filter');
     Route::get('header-mobi', function() {
-        return view('layout.header-mobi');})->name('menu-mn');
+        return view('layout.header-mobi');})->name('menu-mb');
     Route::get('view-login', function() {
         return view('client.view-login');})->name('view-login');
     Route::get('cart-viewjs', function() {
         return view('client.cart-viewjs');})->name('cart-viewjs');
     Route::get('cart-viewship', function() {
         return view('client.cart-viewship');})->name('cart-viewship');
-    Route::post('cart-update-js', function() {
-        return view('client.cart-update-js');})->name('cart-update-js');
-    Route::get('cart-update-js', function() {
-        return view('client.cart-update-js');});
+    // Route::post('cart-update-js', function() {
+    //     return view('client.cart-update-js');})->name('cart-update-js');
+    // Route::get('cart-update-js', function() {
+    //     return view('client.cart-update-js');});
     Route::get('search-pp_sl', function() {
         return view('client.search-pp_sl');})->name('menu-pp_sl');
     Route::get('search-pp_pr', function() {
@@ -92,10 +91,10 @@ Route::post('/getmsg','ProductController@index');
         return view('client.search-pp');})->name('menu-pp');
     Route::get('products-view=imgtrue', function() {
         return view('client.products-view=imgtrue');})->name('products-view=imgtrue');
-    Route::get('products-view=imgfalse', function() {
-        return view('client.products-view=imgfalse');})->name('products-view=imgfalse');
     Route::get('products-view=imgtrue2', function() {
         return view('client.products-view=imgtrue2');})->name('products-view=imgtrue2');
+    Route::get('products-view=imgfalse', function() {
+        return view('client.products-view=imgfalse');})->name('products-view=imgfalse');
     Route::get('products-view=swtrue', function() {
         return view('client.products-view=swtrue');})->name('products-view=swtrue');
     Route::get('products-view=swfalse', function() {

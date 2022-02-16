@@ -102,7 +102,7 @@
 
 <body class="gecko-5_0_0 lazy_icons min_cqty_0 btnt4_style_1 zoom_tp_2 css_scrollbar js_search_true cart_pos_side gecko_toolbar_true hover_img2 swatch_style_rounded swatch_list_size_small label_style_rectangular wrapper_full_width header_full_true header_sticky_true hide_scrolld_false des_header_3 h_transparent_false h_tr_top_false h_banner_false top_bar_true catalog_mode_false cat_sticky_false prs_bordered_grid_1 prs_sw_limit_false search_pos_canvas t4_compare_false dark_mode_false lazyload rtl_false">
                             
-  <a class="in-page-link visually-hidden skip-link" href="#nt_content">Skip to content</a>
+  <a class="in-page-link visually-hidden skip-link" href="#nt_content">Chuyển đến phần nội dung</a>
   <div id="ld_cl_bar" class="op__0 pe_none"></div>
   <div id="nt_wrapper">
     @include("layout.header")
@@ -111,21 +111,22 @@
     </div>
     @include("layout.footer")
   </div>
-  <script
-    type="application/ld+json">{"@context": "http://schema.org","@type": "Organization","name": "Gecko 5 - The best Shopify theme 2021","sameAs": ["https:\/\/twitter.com\/shopify","index.html\/\/facebook.com\/shopify","index.html\/\/pinterest.com\/shopify","index.html\/\/dribbble.com\/shopify","index.html\/\/instagram.com\/shopify","","index.html\/\/www.youtube.com\/shopify","","",""],"url": "https:\/\/gecko5.myshopify.com","address": {"@type": "PostalAddress","streetAddress": "Ha Man - Thuan Thanh","addressLocality": "Bac Ninh","addressRegion": "","postalCode": "250000","addressCountry": "Vietnam"},"contactPoint": [{ "@type": "ContactPoint","telephone": "123456789","contactType": "customer service"}] }</script>
+  <script type="application/ld+json">{"@context": "http://schema.org","@type": "Organization","name": "Gecko 5 - The best Shopify theme 2021","sameAs": ["https:\/\/twitter.com\/shopify","index.html\/\/facebook.com\/shopify","index.html\/\/pinterest.com\/shopify","index.html\/\/dribbble.com\/shopify","index.html\/\/instagram.com\/shopify","","index.html\/\/www.youtube.com\/shopify","","",""],"url": "https:\/\/gecko5.myshopify.com","address": {"@type": "PostalAddress","streetAddress": "Ha Man - Thuan Thanh","addressLocality": "Bac Ninh","addressRegion": "","postalCode": "250000","addressCountry": "Vietnam"},"contactPoint": [{ "@type": "ContactPoint","telephone": "123456789","contactType": "customer service"}] }</script>
   @yield('script-website-name')
 
 
 
 <div>
-  <a id="nt_backtop" class="pf br__50 z__100 des_bt1" href="#"><span class="tc br__50 db cw"><i
-        class="pr pegk pe-7s-angle-up"></i></span></a>
-  <div id="order_day" class="dn">Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday</div>
-  <div id="order_mth" class="dn">January,February,March,April,May,June,July,August,September,October,November,December
-  </div>
-  <div id="js_we_stcl" class="dn">Not enough items available. Only [max] left.</div><a rel="nofollow" id="wis_ntjs"
-    class="dn" data-get='/search' href="{{route('wishlist')}}"><span class="txt_add">Add to
-      Wishlist</span><span class="txt_view">Browse Wishlist</span><span class="txt_remve">Remove Wishlist</span></a>
+  <a id="nt_backtop" class="pf br__50 z__100 des_bt1" href="#">
+    <span class="tc br__50 db cw"><i class="pr pegk pe-7s-angle-up"></i></span></a>
+  <div id="order_day" class="dn">Chủ Nhật,Thứ Hai,Thứ Ba,Thứ Tư,Thứ Năm,Thứ Sáu,Thứ Bảy</div>
+  <div id="order_mth" class="dn">Tháng 1,Tháng 2,Tháng 3,Tháng 4,Tháng 5,Tháng 6,
+    Tháng 7,Tháng 8,Tháng 9,Tháng 10,Tháng 11,Tháng 12</div>
+  <div id="js_we_stcl" class="dn">Không có đủ mặt hàng. Chỉ còn lại [max].</div>
+  <a rel="nofollow" id="wis_ntjs" class="dn" data-get='/search' href="{{route('wishlist')}}">
+    <span class="txt_add">Thêm vào danh sách yêu thích</span>
+    <span class="txt_view">Duyệt danh sách yêu thích</span>
+    <span class="txt_remve">Xóa danh sách yêu thích</span></a>
   <div class="pswp pswp_t4_js dn pswp_tp_light" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="pswp__bg"></div>
     <div class="pswp__scroll-wrap">
@@ -136,10 +137,11 @@
       </div>
       <div class="pswp__ui pswp__ui--hidden">
         <div class="pswp__top-bar">
-          <div class="pswp__counter"></div><button class="pswp__button pswp__button--close"
-            title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title="Share"></button>
-          <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button
-            class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+          <div class="pswp__counter"></div>
+          <button class="pswp__button pswp__button--close" title="Đóng (Esc)"></button>
+          <button class="pswp__button pswp__button--share" title="Chia sẻ"></button>
+          <button class="pswp__button pswp__button--fs" title="Bật/Tắt toàn màn hình"></button>
+          <button class="pswp__button pswp__button--zoom" title="Phóng to/Thu nhỏ"></button>
           <div class="pswp__preloader">
             <div class="pswp__preloader__icn">
               <div class="pswp__preloader__cut">
@@ -149,12 +151,11 @@
           </div>
         </div>
         <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-          <div class="pswp__share-tooltip"></div>
-        </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"> </button>
-        <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"> </button>
+          <div class="pswp__share-tooltip"></div></div>
+        <button class="pswp__button pswp__button--arrow--left" title="Trước (mũi tên trái)"></button>
+        <button class="pswp__button pswp__button--arrow--right" title="Tiếp theo (mũi tên phải)"></button>
         <div class="pswp__caption">
-          <div class="pswp__caption__center"></div>
-        </div>
+          <div class="pswp__caption__center"></div></div>
       </div>
     </div>
     <div class="pswp__thumbnails"></div>
@@ -162,15 +163,19 @@
   <div class="mask-overlay ntpf t__0 r__0 l__0 b__0 op__0 pe_none"></div>
 
 
-  <div id="nt_menu_canvas" class="nt_fk_canvas nt_sleft dn lazyload" data-include="{{route('menu-mn')}}"></div>
+  <div id="nt_menu_canvas" class="nt_fk_canvas nt_sleft dn lazyload"
+    data-include="{{route('menu-mb')}}"></div>
   <i class="close_pp pegk pe-7s-close ts__03 cw close_mn_t4 ntpf op__0 pe_none"></i>
   <div id="sp_notices_wrapper"></div>
   <form method="post" action="https://gecko5.myshopify.com/localization" id="CurrencyLangSelector"
-    accept-charset="UTF-8" class="hide hidden dn" enctype="multipart/form-data"><input type="hidden" name="form_type"
-      value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method"
-      value="put" /><input type="hidden" name="return_to" value="/" /><input type="hidden" name="locale_code"
-      id="LocaleSelector" value="en" data-disclosure-input /><input type="hidden" name="currency_code"
-      id="CurrencySelector" value="USD" data-disclosure-input /></form>
+    accept-charset="UTF-8" class="hide hidden dn" enctype="multipart/form-data">
+    <input type="hidden" name="form_type" value="localization">
+    <input type="hidden" name="utf8" value="✓">
+    <input type="hidden" name="_method" value="put">
+    <input type="hidden" name="return_to" value="/">
+    <input type="hidden" name="locale_code" id="LocaleSelector" value="en" data-disclosure-input>
+    <input type="hidden" name="currency_code"
+      id="CurrencySelector" value="USD" data-disclosure-input></form>
 
 
   @yield('side')
@@ -181,52 +186,56 @@
     <div class="gecko_toolbar gecko_toolbar_label_true ntpf r__0 l__0 b__0 flex fl_between al_center">
       <div class="type_toolbar_shop gecko_toolbar_item">
         <a href="{{route('shop')}}">
-          <span class="toolbar_icon"></span><span class="gecko_toolbar_label">Shop</span></a>
+          <span class="toolbar_icon"></span>
+          <span class="gecko_toolbar_label">Cửa hàng</span></a>
       </div>
       <div class="type_toolbar_filter gecko_toolbar_item dn">
         <a class="dt_trigger_cl" rel="nofollow" data-no-instant href="#" data-trigger=".btn_filter">
-          <span class="toolbar_icon"></span><span class="gecko_toolbar_label">Filter</span></a>
+          <span class="toolbar_icon"></span>
+          <span class="gecko_toolbar_label">Bộ lọc</span></a>
       </div>
       <div class="type_toolbar_wish gecko_toolbar_item">
         <a rel="nofollow" href="{{route('wishlist')}}">
-          <span class="toolbar_icon"><span class="jswcount toolbar_count">0</span></span><span
-            class="gecko_toolbar_label">Wishlist</span></a>
+          <span class="toolbar_icon"><span class="jswcount toolbar_count">0</span></span>
+          <span class="gecko_toolbar_label">Yêu thích</span></a>
       </div>
       <div class="type_toolbar_cart gecko_toolbar_item">
         <a href="{{route('cart')}}" class="push_side" data-id="#nt_cart_canvas">
-          <span class="toolbar_icon"><span class="jsccount toolbar_count">0</span></span><span
-            class="gecko_toolbar_label">Cart</span></a>
+          <span class="toolbar_icon"><span class="jsccount toolbar_count">0</span></span>
+          <span class="gecko_toolbar_label">Giỏ hàng</span></a>
       </div>
       <div class="type_toolbar_account gecko_toolbar_item">
         <a href="{{route('login')}}" class="push_side" data-id="#nt_login_canvas">
-          <span class="toolbar_icon"></span><span class="gecko_toolbar_label">Account</span></a>
+          <span class="toolbar_icon"></span>
+          <span class="gecko_toolbar_label">Tài khoản</span></a>
       </div>
       <div class="type_toolbar_search gecko_toolbar_item">
         <a href="{{route('search')}}" class="push_side" data-id="#nt_search_canvas">
-          <span class="toolbar_icon"></span><span class="gecko_toolbar_label">Search</span></a>
+          <span class="toolbar_icon"></span>
+          <span class="gecko_toolbar_label">Tìm kiếm</span></a>
       </div>
     </div>
   </div>
   <div class="js_lz_pppr dn" data-include="{{route('menu-pp_pr')}}"></div>
   <div class="js_lz_slpr dn salse_pp_mb_false" data-include="{{route('menu-pp_sl')}}"></div>
   <div id="snow_ef_t4" class="dn"></div>
-  <div id="gliconsymbols" class="hide dn"><svg xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink">
-      <symbol id="scl_remove"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"
-          fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="3 6 5 6 21 6"></polyline>
-          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-          <line x1="10" y1="11" x2="10" y2="17"></line>
-          <line x1="14" y1="11" x2="14" y2="17"></line>
-        </svg> </symbol>
-      <symbol id="scl_edit"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor"
-          fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-        </svg> </symbol>
-      <symbol id="scl_selected"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path d="M9 20l-7-7 3-3 4 4L19 4l3 3z" />
-        </svg></symbol>
+  <div id="gliconsymbols" class="hide dn">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol id="scl_remove"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="3 6 5 6 21 6"></polyline>
+        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+        <line x1="10" y1="11" x2="10" y2="17"></line>
+        <line x1="14" y1="11" x2="14" y2="17"></line>
+      </svg></symbol>
+      <symbol id="scl_edit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+      </svg></symbol>
+      <symbol id="scl_selected"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M9 20l-7-7 3-3 4 4L19 4l3 3z">
+      </svg></symbol>
     </svg></div>
 </div>
 </body>

@@ -310,7 +310,7 @@
             </div>
             <div class="social-share tc">
               <div class="nt-social nt__addthis addthis_inline_share_toolbox_icxz"></div></div>
-            <a href="{{route('productdetails')}}"
+            <a href="{{route('details',['id'=>1])}}"
               class="btn fwsb detail_link">Xem chi tiết đầy đủ <i class="facl facl-right"></i></a>
           </div>
         </div>

@@ -1,6 +1,6 @@
 <div class="pr oh">
   <span class="tc nt_labels pa pe_none cw"></span>
-  <a href="{{route('quick_shop')}}" data-linkhref class="db">
+  <a href="{{route('details',['id'=>1])}}" data-linkhref class="db">
     <div class="pr_lazy_img main-img nt_img_ratio lazyload nt_bg_lz" data-id="18121582346397"
       data-bgset="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
       data-parent-fit="width" data-wiis data-ratio="0.6811989100817438" data-sizes="auto"></div>
@@ -14,7 +14,7 @@
 
 <div class="hover_button op__0 tc pa flex column ts__03">
   <div class="nt_add_w ts__03 ">
-    <a href="{{route('productdetails')}}" data-no-instant data-id="5427723010205"
+    <a href="{{route('details',['id'=>1])}}" data-no-instant data-id="5427723010205"
       class="wishlistadd cb chp ttip_nt tooltip_left" rel="nofollow">
       <span class="tt_txt">Thêm vào danh sách yêu thích</span>
       <i class="facl facl-heart-o"></i></a>

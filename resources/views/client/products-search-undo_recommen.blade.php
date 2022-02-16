@@ -9,7 +9,7 @@
       <span class="section-subtitle db tc sub-title"></span>
     </div>
     <div class="sortby_3 products nt_products_holder nt_slider row row_pr_1 cdt_des_1 round_cd_false nt_cover ratio_nt position_8 space_30 prev_next_0 btn_owl_1 dot_owl_1 dot_color_1 btn_vi_1"
-      data-flickityjs='{"imagesLoaded": 0,"adaptiveHeight": 0, "contain": 1, "groupCells": "100%", "dragThreshold" : 5, "cellAlign": "left","wrapAround": true,"prevNextButtons": false,"percentPosition": 1,"pageDots": false, "autoPlay" : 0, "pauseAutoPlayOnHover" : true, "rightToLeft": true }'>
+      data-flickityjs='{"imagesLoaded":0,"adaptiveHeight":0,"contain":1,"groupCells":"100%","dragThreshold":5,"cellAlign":"left","wrapAround":true,"prevNextButtons":false,"percentPosition":1,"pageDots":false,"autoPlay":0,"pauseAutoPlayOnHover":true,"rightToLeft":true }'>
 
       @for($i=1; $i<=4; $i++)
       <div data-page="" class="col-lg-3 pr_animated col-md-3 col-6 mt__30 pr_grid_item product nt_pr desgin__1">
@@ -23,8 +23,8 @@
                 href="/products/blue-cotton-leggings">Blue Cotton Leggings</a></h3>
             <span class="price dib mb__5"><span class=money>$30.00</span>
             </span>
-            <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyload" data-colorCount="7"
-              data-include="{{route('products-view=swfalse')}}"></div>
+            <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyload"
+              data-colorCount="7" data-include="{{route('products-view=swfalse')}}"></div>
           </div>
         </div>
       </div>

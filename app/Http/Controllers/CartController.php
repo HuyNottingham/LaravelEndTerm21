@@ -9,6 +9,7 @@ use App\Models\Category;
 
 class CartController extends Controller{
     function i(){
+        return view('client.cart');
         $cart = CartView::where('user_id', $_COOKIE['id'])
                 ->get();
         $sex = Sex::all();

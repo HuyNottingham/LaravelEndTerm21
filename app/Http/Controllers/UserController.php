@@ -65,15 +65,7 @@ class UserController extends Controller{
 
     function login(Request $req){
         $msg='';
-        if (isset($req->name)) {
-            $model = new User();
-            $model->fill($req->all());
-            $model->password = md5(md5(md5(md5($req->password))));
-            if ($model->save())
-                $msg='Tạo tài khoản thành công !';
-            else
-                $msg='Thao tác thất bại !';
-        } else {
+        if ($req->form_type == 'login') {
             $acc = User::where('email', $req->email)
                     ->where('password', md5(md5(md5(md5($req->password)))))
                     ->first();
@@ -83,7 +75,65 @@ class UserController extends Controller{
                 setcookie("id", $acc->id, time()+(86400*7), "/");
                 return redirect()->route('home');
             }
+        } elseif ($req->form_type == 'regis') {
+            $model = new User();
+            $model->email = $req->email;
+            $model->password = md5(md5(md5(md5($req->password))));
+            $model->name = $req->first_name + $req->last_name;
+            if ($model->name == '')
+                unset($model->name);
+            if ($model->save())
+                $msg='Tạo tài khoản thành công !';
+            else
+                $msg='Thao tác thất bại !';
+        } elseif ($req->form_type == 'recover') {
+            echo rand(0, 99999);
+            return;
+            // gửi thư số này, truyền lại để so sánh
         }
         return redirect()->back()->with('msg', $msg);
         }
+
+
+        // function login(Request $req){
+        //     $acc = User::where('email', $req->email)
+        //             ->where('password', md5(md5(md5(md5($req->password)))))
+        //             ->first();
+        //     if ($acc==null)
+        //         return redirect()->back()->with('msg', 'Tài khoản đăng nhập không đúng !');
+        //     else {
+        //         setcookie("id", $acc->id, time()+(86400*7), "/");
+        //         return redirect()->route('home');
+        //     }
+        //     }
+    
+    
+        // function regis(Request $req){
+        //     return "vcl";
+        //     $msg='';
+        //     $model = new User();
+        //     $model->fill($req->all());
+        //     $model->password = md5(md5(md5(md5($req->password))));
+        //     if ($model->save())
+        //         $msg='Tạo tài khoản thành công !';
+        //     else
+        //         $msg='Thao tác thất bại !';
+        //     return redirect()->back()->with('msg', $msg);
+        //     }
+    
+    
+        // function recover(Request $req){
+            // echo rand(0, 99999);
+            // return;
+            // // gửi thư số này, truyền lại để so sánh
+            // $msg='';
+            // $model = new User();
+            // $model->fill($req->all());
+            // $model->password = md5(md5(md5(md5($req->password))));
+            // if ($model->save())
+            //     $msg='Tạo tài khoản thành công !';
+            // else
+            //     $msg='Thao tác thất bại !';
+            // return redirect()->back()->with('msg', $msg);
+            // }
 }

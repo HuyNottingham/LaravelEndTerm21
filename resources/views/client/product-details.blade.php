@@ -27,8 +27,9 @@
       <div class="container">
         <div class="row al_center">
           <div class="col">
-            <nav class="sp-breadcrumb"><a href="../index.html" class="dib">Home</a><i
-                class="facl facl-angle-right"></i>Blue Cotton Leggings</nav>
+            <nav class="sp-breadcrumb">
+              <a href="{{route('home')}}" class="dib">Trang chủ</a>
+              <i class="facl facl-angle-right"></i>Blue Cotton Leggings</nav>
           </div>
         </div>
       </div>
@@ -51,8 +52,8 @@
                         data-src="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644.jpg?v=1595905285"
                         data-width="750" data-height="1101" data-cap="Blue Cotton Leggings"
                         style="padding-top:146.8%;">
-                        <noscript><img
-                            src="{{asset('js')}}/cdn.shopify.com/s/files/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c6446c75.jpg?v=1595905285"
+                        <noscript>
+                          <img src="{{asset('js')}}/cdn.shopify.com/s/files/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c6446c75.jpg?v=1595905285"
                             loading="lazy" alt="Blue Cotton Leggings"></noscript>
                       </div>
                     @endfor
@@ -61,7 +62,7 @@
                   <div class="p_group_btns pa flex">
                     <button class="br__40 tc flex al_center fl_center bghp_ show_btn_pr_gallery ttip_nt tooltip_top_left">
                       <i class="las la-expand-arrows-alt"></i>
-                      <span class="tt_txt">Click to enlarge</span></button>
+                      <span class="tt_txt">Bấm để phóng to</span></button>
                   </div>
                 </div>
                 <div class="col-12 col-lg-auto col_nav nav_medium">
@@ -85,9 +86,9 @@
                   <div class="flex wrap fl_between al_center price-review mt__15 pb__10 mb__20 price_stock">
                     <p class="price_range" id="price_ppr"><span class=money>$30.00</span></p><span
                       class="available_wrapper"><span class="available value"><span id="txt_vl_in_ppr"
-                          class="value_in cb"><span class="js_in_stock ">In Stock</span><span
-                            class="js_in_stock_pre_oder dn">In Stock</span></span><span id="txt_vl_out_ppr"
-                          class="value_out dn">Out of stock</span></span></span>
+                          class="value_in cb"><span class="js_in_stock ">Còn hàng</span><span
+                            class="js_in_stock_pre_oder dn">Còn hàng</span></span><span id="txt_vl_out_ppr"
+                          class="value_out dn">Hết hàng</span></span></span>
                   </div><a href="#tab_pr_reivew" class="rating_sp_kl">
                     <div class="review-widget">
                       <ryviu-widget-total reviews_data="11;4.36" product_id="5427723010205"
@@ -99,14 +100,15 @@
                   </div>
                   <div class="btn-atc atc-slide btn_full_false PR_no_pick_false btn_des_1 btn_txt_3">
                     <div id="callBackVariant_ppr" data-js-callback class="nt_blue nt1_xs nt2_">
-                      <form method="post" action="https://gecko5.myshopify.com/cart/add" id="cart-form_ppr"
+                      <form method="post" id="cart-form_ppr"
                         accept-charset="UTF-8" class="nt_cart_form variations_form variations_form_ppr"
-                        enctype="multipart/form-data" data-productid="5427723010205"><input type="hidden"
-                          name="form_type" value="product" /><input type="hidden" name="utf8" value="✓" />
+                        enctype="multipart/form-data" data-productid="5427723010205">
+                        <input type="hidden" name="form_type" value="product" />
+                        <!-- <input type="hidden" name="utf8" value="✓" /> -->
+
                         <div id="infiniteoptions-container"></div>
                         <select name="id" data-productid="5427723010205"
                           id="product-select_ppr" class="product-select_pr product-form__variants hide hidden">
-
                           <option selected="selected" value="35335215218845">Blue / XS</option>
                           <option value="35335215251613">Blue / S</option>
                           <option value="35335215284381">Blue / M</option>
@@ -147,36 +149,42 @@
                           class="fimg_false variations mb__40 style__circle size_medium style_color des_color_1 remove_soldout_false">
                           <div data-opname="color" class="nt_select_ppr0  swatch is-color is-ntcolor"
                             id="nt_select_ppr_0">
-                            <h4 class="swatch__title">Color: <span class="nt_name_current">Blue</span></h4>
+                            <h4 class="swatch__title">Màu: <span class="nt_name_current">Blue</span></h4>
                             <ul class="swatches-select swatch__list_pr" data-id="0" data-size="2">
                               <li data-index="0" data-value='blue'
                                 class="ttip_nt tooltip_top_right nt-swatch swatch_pr_item bg_css_blue is-selected-nt"
-                                data-escape="Blue"><span class="tt_txt">Blue</span><span
-                                  class="swatch__value_pr pr bg_color_blue lazyload"></span></li>
+                                data-escape="Blue">
+                                <span class="tt_txt">Blue</span>
+                                <span class="swatch__value_pr pr bg_color_blue lazyload"></span></li>
                               <li data-index="1" data-value='red'
                                 class="ttip_nt tooltip_top nt-swatch swatch_pr_item bg_css_red " data-escape="Red">
-                                <span class="tt_txt">Red</span><span
-                                  class="swatch__value_pr pr bg_color_red lazyload"></span></li>
+                                <span class="tt_txt">Red</span>
+                                <span class="swatch__value_pr pr bg_color_red lazyload"></span></li>
                               <li data-index="2" data-value='cyan'
                                 class="ttip_nt tooltip_top nt-swatch swatch_pr_item bg_css_cyan "
-                                data-escape="Cyan"><span class="tt_txt">Cyan</span><span
-                                  class="swatch__value_pr pr bg_color_cyan lazyload"></span></li>
+                                data-escape="Cyan">
+                                <span class="tt_txt">Cyan</span>
+                                <span class="swatch__value_pr pr bg_color_cyan lazyload"></span></li>
                               <li data-index="3" data-value='black'
                                 class="ttip_nt tooltip_top nt-swatch swatch_pr_item bg_css_black "
-                                data-escape="Black"><span class="tt_txt">Black</span><span
-                                  class="swatch__value_pr pr bg_color_black lazyload"></span></li>
+                                data-escape="Black">
+                                <span class="tt_txt">Black</span>
+                                <span class="swatch__value_pr pr bg_color_black lazyload"></span></li>
                               <li data-index="4" data-value='pink'
                                 class="ttip_nt tooltip_top nt-swatch swatch_pr_item bg_css_pink "
-                                data-escape="Pink"><span class="tt_txt">Pink</span><span
-                                  class="swatch__value_pr pr bg_color_pink lazyload"></span></li>
+                                data-escape="Pink">
+                                <span class="tt_txt">Pink</span>
+                                <span class="swatch__value_pr pr bg_color_pink lazyload"></span></li>
                               <li data-index="5" data-value='grey'
                                 class="ttip_nt tooltip_top nt-swatch swatch_pr_item bg_css_grey "
-                                data-escape="Grey"><span class="tt_txt">Grey</span><span
-                                  class="swatch__value_pr pr bg_color_grey lazyload"></span></li>
+                                data-escape="Grey">
+                                <span class="tt_txt">Grey</span>
+                                <span class="swatch__value_pr pr bg_color_grey lazyload"></span></li>
                               <li data-index="6" data-value='brown'
                                 class="ttip_nt tooltip_top nt-swatch swatch_pr_item bg_css_brown "
-                                data-escape="Brown"><span class="tt_txt">Brown</span><span
-                                  class="swatch__value_pr pr bg_color_brown lazyload"></span></li>
+                                data-escape="Brown">
+                                <span class="tt_txt">Brown</span>
+                                <span class="swatch__value_pr pr bg_color_brown lazyload"></span></li>
                             </ul>
                           </div>
                           <div data-opname="size" class="nt_select_ppr1 swatch is-label is-size"
@@ -199,31 +207,33 @@
                         </div>
                         <div class="nt_pr_js lazypreload op__0" data-id="_ppr"
                           data-include="{{route('products-view=js_ppr')}}"></div>
-                        <div id="pr_incoming_mess_ppr" class="nt_varianqty mb__15 cb tu fwsb dn">Will not ship until
-                          <span class="jsnt">[19041994]</span></div>
+                        <div id="pr_incoming_mess_ppr" class="nt_varianqty mb__15 cb tu fwsb dn">Sẽ không vận chuyển cho đến
+                          <span class="jsnt">[02022022]</span></div>
                         <div class="variations_button in_flex column w__100">
                           <div class="flex wrap">
                             <div class="quantity pr mr__10 order-1 qty__true" id="sp_qty_ppr">
                               <input type="number" class="input-text qty text tc qty_pr_js" step="1" min="1"
                                 max="9999" name="quantity" value="1" size="4" pattern="[0-9]*" inputmode="numeric">
                               <div class="qty tc fs__14">
-                                <button type="button" class="plus db cb pa pd__0 pr__15 tr r__0"><i
-                                    class="facl facl-plus"></i></button><button type="button"
-                                  class="minus db cb pa pd__0 pl__15 tl l__0"><i
-                                    class="facl facl-minus"></i></button>
+                                <button type="button" class="plus db cb pa pd__0 pr__15 tr r__0">
+                                  <i class="facl facl-plus"></i></button>
+                                <button type="button" class="minus db cb pa pd__0 pl__15 tl l__0">
+                                  <i class="facl facl-minus"></i></button>
                               </div>
                             </div>
                             <a rel="nofollow" data-no-instant href="#"
-                              class="single_stt out_stock button pe_none order-2" id="out_stock_ppr">Out of
-                              stock</a>
+                              class="single_stt out_stock button pe_none order-2"
+                              id="out_stock_ppr">Hết hàng</a>
                             <div class="nt_add_w ts__03 order-3">
-                              <a href="blue-cotton-leggings.html" data-no-instant data-id="5427723010205"
-                                class="wishlistadd cb chp ttip_nt tooltip_top_left" rel="nofollow"><span
-                                  class="tt_txt">Add to Wishlist</span><i class="facl facl-heart-o"></i></a>
-                            </div><button type="submit" data-time='6000' data-ani='shake'
-                              class="single_add_to_cart_button button truncate js_frm_cart w__100 mt__20 order-4"><span
-                                class="txt_add ">Add to cart</span><span
-                                class="txt_pre dn">Pre-order</span></button>
+                              <a href="{{route('details',['id'=>1])}}" data-no-instant data-id="5427723010205"
+                                class="wishlistadd cb chp ttip_nt tooltip_top_left" rel="nofollow">
+                                <span class="tt_txt">Thêm vào danh sách yêu thích</span>
+                                <i class="facl facl-heart-o"></i></a>
+                            </div>
+                            <button type="submit" data-time='6000' data-ani='shake'
+                              class="single_add_to_cart_button button truncate js_frm_cart w__100 mt__20 order-4">
+                              <span class="txt_add ">Thêm vào giỏ hàng</span>
+                              <span class="txt_pre dn">Đặt hàng trước</span></button>
                           </div>
                           <div data-shopify="payment-button" data-has-selling-plan="false"
                             class="shopify-payment-button">
@@ -235,84 +245,90 @@
                       </form>
                       <div class="form-notify single_variation_wrap w_100 frm_notify_pr mt__25 dn"
                         id="frm_notify_ppr">
-                        <form method="post" action="https://gecko5.myshopify.com/contact#contact_form"
-                          id="contact_form1" accept-charset="UTF-8" class="frm_notify w_100"><input type="hidden"
-                            name="form_type" value="contact" /><input type="hidden" name="utf8" value="✓" />
+                        <form method="post"
+                          id="contact_form1" accept-charset="UTF-8" class="frm_notify w_100">
+                          <input type="hidden" name="form_type" value="contact" />
+                          <!-- <input type="hidden" name="utf8" value="✓" /> -->
 
-
-                          <p class="cd fwsb mt__15 mb__10 fs__16">Notify me when this product is available:</p>
+                          <p class="cd fwsb mt__15 mb__10 fs__16">Thông báo cho tôi khi sản phẩm này có sẵn:</p>
                           <div class="row">
                             <div class="col-12 mb__20">
-                              <label for="ContactForm_ppr35335215218845-email">Email address <span
-                                  aria-hidden="true">*</span></label>
-                              <input required="required" type="email" id="ContactForm_ppr35335215218845-email"
-                                name="contact[email]" autocorrect="off" autocapitalize="off" aria-required="true"
-                                value="">
+                              <label for="ContactForm_ppr35335215218845-email">Địa chỉ email
+                                <span aria-hidden="true">*</span></label>
+                              <input type="email" name="email" id="ContactForm_ppr35335215218845-email"
+                                autocorrect="off" autocapitalize="off" aria-required="true" required>
                             </div>
                             <div class="col-12 mb__20 hide hidden">
-                              <label for="ContactForm_ppr35335215218845-message">Your Message</label>
+                              <label for="ContactForm_ppr35335215218845-message">Lời nhắn</label>
                               <textarea rows="10" id="ContactForm_ppr35335215218845-message" name="contact[body]"
-                                data-wg-notranslate>Please notify me when Blue Cotton Leggings ( [variant] ) becomes available - https://gecko5.myshopify.com/products/blue-cotton-leggings[url]</textarea>
+                                data-wg-notranslate>Hãy thông báo cho tôi khi Blue Cotton Leggings ( [variant] ) có sẵn - https://gecko5.myshopify.com/products/blue-cotton-leggings[url]</textarea>
                             </div>
                           </div>
-                          <input type="hidden" name="challenge" value="false">
-                          <input type="submit" class="add_to_cart_button button" value="Email me when available">
+                          <!-- <input type="hidden" name="challenge" value="false"> -->
+                          <input type="submit" class="add_to_cart_button button"
+                            value="Gửi mail cho tôi khi có sẵn">
                         </form>
                       </div>
                     </div>
                   </div>
                   <div id="trust_seal_ppr" class="pr_trust_seal tl_md tc">
-                    <p class="mess_cd cb mb__10 fwm tu" style="font-size: 16px"></p><img
-                      style="--max-w-img:2244px;width: 60%" class="lazyload lz_op_ef img_tr_s1"
+                    <p class="mess_cd cb mb__10 fwm tu" style="font-size: 16px"></p>
+                    <img style="--max-w-img:2244px;width: 60%" class="lazyload lz_op_ef img_tr_s1"
                       src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%202244%20285%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
                       data-src="//cdn.shopify.com/s/files/1/0437/1913/1293/files/trust_img2_{width}x.png?v=1599813537"
-                      data-widths="[90, 120, 150, 180, 360, 480, 600, 750, 940, 1080, 1296]" data-sizes="auto"
-                      alt="">
+                      data-widths="[90, 120, 150, 180, 360, 480, 600, 750, 940, 1080, 1296]" data-sizes="auto">
                   </div>
-                  <div class="extra-link mt__35 fwsb"><a class="cd chp ajax_pp_js mr__20" href="#" data-no-instant
-                      rel="nofollow" data-id='ps_ajax_pp_js' data-url="/pages/size-guide/?view=AjaxPopup">Size
-                      Guide</a><a class="ajax_pp_js cd chp mr__20" href="#" data-no-instant rel="nofollow"
-                      data-id='dl_ajax_pp_js' data-url="/pages/delivery-return/?view=AjaxPopup">Delivery &amp;
-                      Return</a><a class="ajax_pp_js cd chp" href="#" data-no-instant rel="nofollow"
+                  <div class="extra-link mt__35 fwsb">
+                    <a class="cd chp ajax_pp_js mr__20" href="#" data-no-instant
+                      rel="nofollow" data-id='ps_ajax_pp_js' data-url="{{route('size-guide-aj')}}"
+                      >Hướng dẫn chọn size</a>
+                    <!-- <a class="ajax_pp_js cd chp mr__20" href="#" data-no-instant rel="nofollow"
+                      data-id='dl_ajax_pp_js' data-url="#tab_1600741579099"
+                      >Giao & Trả hàng</a>
+                    <a class="ajax_pp_js cd chp" href="#" data-no-instant rel="nofollow"
                       data-id='ask_ajax_pp_js' data-url="/search/?view=AjaxContact"
-                      data-title='Blue Cotton Leggings' data-handle='blue-cotton-leggings.html'>Ask a Question</a>
+                      data-title='Blue Cotton Leggings' data-handle='blue-cotton-leggings.html'
+                      >Đặt câu hỏi</a> -->
                   </div>
-                  <div class="product_meta"><span class="sku_wrapper">SKU: <span class="sku value cb"
-                        id="pr_sku_ppr">M-06</span><span class="sku value dn"
-                        id="pr_sku_na_ppr">N/A</span></span><span class="posted_in">Categories:
-                      <a href="../collections/clothing.html" title="">Clothing</a></span><span
-                      class="tagged_as">Tags:
-                      <a href="../collections/clothing/accessories.html">Accessories</a>, <a
-                        href="../collections/clothing/black.html">black</a>, <a
-                        href="../collections/clothing/blue.html">blue</a>, <a
-                        href="../collections/clothing/brown.html">brown</a>, <a
-                        href="../collections/clothing/clothing.html">Clothing</a>, <a
-                        href="../collections/clothing/color-black.html">Color Black</a>, <a
-                        href="../collections/clothing/color-blue.html">Color Blue</a>, <a
-                        href="../collections/clothing/color-brown.html">Color Brown</a>, <a
-                        href="../collections/clothing/color-cyan.html">Color Cyan</a>, <a
-                        href="../collections/clothing/color-grey.html">Color Grey</a>, <a
-                        href="../collections/clothing/color-pink.html">Color Pink</a>, <a
-                        href="../collections/clothing/color-red.html">Color Red</a>, <a
-                        href="../collections/clothing/cyan.html">Cyan</a>, <a
-                        href="../collections/clothing/grey.html">grey</a>, <a
-                        href="../collections/clothing/l.html">L</a>, <a href="../collections/clothing/m.html">M</a>,
-                      <a href="../collections/clothing/pink.html">Pink</a>, <a
-                        href="../collections/clothing/price-7-50.html">Price $7-$50</a>, <a
-                        href="../collections/clothing/red.html">Red</a>, <a
-                        href="../collections/clothing/s.html">S</a>, <a
-                        href="../collections/clothing/short.html">short</a>, <a
-                        href="../collections/clothing/size-l.html">Size L</a>, <a
-                        href="../collections/clothing/size-m.html">Size M</a>, <a
-                        href="../collections/clothing/size-s.html">Size S</a>, <a
-                        href="../collections/clothing/size-xl.html">Size XL</a>, <a
-                        href="../collections/clothing/size-xs.html">Size XS</a>, <a
-                        href="../collections/clothing/vendor-gecko.html">Vendor Gecko</a>, <a
-                        href="../collections/clothing/xl.html">XL</a>, <a
-                        href="../collections/clothing/xs.html">XS</a></div>
+                  <div class="product_meta">
+                    <!-- <span class="sku_wrapper">SKU:
+                      <span class="sku value cb" id="pr_sku_ppr">M-06</span>
+                      <span class="sku value dn" id="pr_sku_na_ppr">N/A</span></span> -->
+                    <span class="posted_in">Categories:
+                      <a href="{{route('shop')}}">Quần</a></span>
+                    <!-- <span class="tagged_as">Tags:
+                      <a href="../collections/clothing/accessories.html">Accessories</a>,
+                      <a href="../collections/clothing/black.html">black</a>,
+                      <a href="../collections/clothing/blue.html">blue</a>,
+                      <a href="../collections/clothing/brown.html">brown</a>,
+                      <a href="../collections/clothing/clothing.html">Clothing</a>,
+                      <a href="../collections/clothing/color-black.html">Color Black</a>,
+                      <a href="../collections/clothing/color-blue.html">Color Blue</a>,
+                      <a href="../collections/clothing/color-brown.html">Color Brown</a>,
+                      <a href="../collections/clothing/color-cyan.html">Color Cyan</a>,
+                      <a href="../collections/clothing/color-grey.html">Color Grey</a>,
+                      <a href="../collections/clothing/color-pink.html">Color Pink</a>,
+                      <a href="../collections/clothing/color-red.html">Color Red</a>,
+                      <a href="../collections/clothing/cyan.html">Cyan</a>,
+                      <a href="../collections/clothing/grey.html">grey</a>,
+                      <a href="../collections/clothing/l.html">L</a>,
+                      <a href="../collections/clothing/m.html">M</a>,
+                      <a href="../collections/clothing/pink.html">Pink</a>,
+                      <a href="../collections/clothing/price-7-50.html">Price $7-$50</a>,
+                      <a href="../collections/clothing/red.html">Red</a>,
+                      <a href="../collections/clothing/s.html">S</a>,
+                      <a href="../collections/clothing/short.html">short</a>,
+                      <a href="../collections/clothing/size-l.html">Size L</a>,
+                      <a href="../collections/clothing/size-m.html">Size M</a>,
+                      <a href="../collections/clothing/size-s.html">Size S</a>,
+                      <a href="../collections/clothing/size-xl.html">Size XL</a>,
+                      <a href="../collections/clothing/size-xs.html">Size XS</a>,
+                      <a href="../collections/clothing/vendor-gecko.html">Vendor Gecko</a>,
+                      <a href="../collections/clothing/xl.html">XL</a>,
+                      <a href="../collections/clothing/xs.html">XS</a></span> -->
+                  </div>
                   <div class="social-share tc">
                     <div class="nt-social nt__addthis addthis_inline_share_toolbox_icxz"></div>
-
                   </div>
                 </div>
               </div>
@@ -652,7 +668,7 @@
     "@context": "http://schema.org/",
     "@type": "Product",
     "name": "Blue Cotton Leggings",
-    "url": "<?= route('productdetails') ?>","image": [
+    "url": "<?= route('details',['id'=>1]) ?>","image": [
         "https://cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_750x.jpg?v=1595905285"
       ],"description": "Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum. Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci.Rain \u0026amp;amp; WaterResistantUV ResistantCoatingsCorrosion Resistanceto Sea waterLead-freePowdercoat FinishResistant toSpillsRecyclableAluminium Frame",
     "sku": "M-06",
@@ -700,106 +716,40 @@
               <div class="col sticky_atc_info">
                 <h4 class="fs__14 mg__0">Blue Cotton Leggings</h4>
 
-    <select name="id" class="hide hidden js_sticky_sl" data-select-sticky_atc>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215218845" selected="selected">Blue / XS</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215251613">Blue / S</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215284381">Blue / M</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215317149">Blue / L</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215349917">Blue / XL</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215415453">Red / S</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215448221">Red / M</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215480989">Red / L</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215513757">Red / XL</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215579293">Cyan / S</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215612061">Cyan / M</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215644829">Cyan / L</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215677597">Cyan / XL</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-41_3a52093f-b7de-45c8-abe1-32a6372113d8_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215710365">Black / XS</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215743133">Black / S</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215775901">Black / M</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215808669">Black / L</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215841437">Black / XL</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/P-47_c8586519-6690-4d82-9830-115d34b8cb7d_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215874205">Pink / XS</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215906973">Pink / S</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215939741">Pink / M</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335215972509">Pink / L</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216005277">Pink / XL</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-44_4277fc8f-e49d-41f0-8c2c-1bde58d617ae_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216038045">Grey / XS</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216070813">Grey / S</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216103581">Grey / M</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216136349">Grey / L</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216169117">Grey / XL</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-42_0b1c4d73-6c5a-4895-a249-08a71ec56e14_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216201885">Brown / XS</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216234653">Brown / S</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216267421">Brown / M</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216300189">Brown / L</option>
-      <option
-        data-img="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_1x1.jpg?v=1595905285"
-        data-ogprice="3000" data-price="3000" value="35335216332957">Brown / XL</option>
+    <select name="id" class="hidden js_sticky_sl" data-select-sticky_atc>
+      <option value="35335215218845" selected="selected">Blue / XS</option>
+      <option value="35335215251613">Blue / S</option>
+      <option value="35335215284381">Blue / M</option>
+      <option value="35335215317149">Blue / L</option>
+      <option value="35335215349917">Blue / XL</option>
+      <option value="35335215415453">Red / S</option>
+      <option value="35335215448221">Red / M</option>
+      <option value="35335215480989">Red / L</option>
+      <option value="35335215513757">Red / XL</option>
+      <option value="35335215579293">Cyan / S</option>
+      <option value="35335215612061">Cyan / M</option>
+      <option value="35335215644829">Cyan / L</option>
+      <option value="35335215677597">Cyan / XL</option>
+      <option value="35335215710365">Black / XS</option>
+      <option value="35335215743133">Black / S</option>
+      <option value="35335215775901">Black / M</option>
+      <option value="35335215808669">Black / L</option>
+      <option value="35335215841437">Black / XL</option>
+      <option value="35335215874205">Pink / XS</option>
+      <option value="35335215906973">Pink / S</option>
+      <option value="35335215939741">Pink / M</option>
+      <option value="35335215972509">Pink / L</option>
+      <option value="35335216005277">Pink / XL</option>
+      <option value="35335216038045">Grey / XS</option>
+      <option value="35335216070813">Grey / S</option>
+      <option value="35335216103581">Grey / M</option>
+      <option value="35335216136349">Grey / L</option>
+      <option value="35335216169117">Grey / XL</option>
+      <option value="35335216201885">Brown / XS</option>
+      <option value="35335216234653">Brown / S</option>
+      <option value="35335216267421">Brown / M</option>
+      <option value="35335216300189">Brown / L</option>
+      <option value="35335216332957">Brown / XL</option>
     </select>
 
                 <span class="txt_under sticky_atc_a cp fwm">Blue / XS</span>
@@ -991,10 +941,10 @@
                 source_url: "https://cdn.shopify.com/s/trekkie.storefront.6967fb130a629a5a38a7939e6f3366da4c6e3e41.min.js"});
           };
           scriptFallback.async = true;
-          scriptFallback.src = '{{asset('js')}}/cdn.shopify.com/s/trekkie.storefront.6967fb130a629a5a38a7939e6f3366da4c6e3e41.min.js';
+          scriptFallback.src = "{{asset('js')}}/cdn.shopify.com/s/trekkie.storefront.6967fb130a629a5a38a7939e6f3366da4c6e3e41.min.js";
           first.parentNode.insertBefore(scriptFallback, first);};
         script.async = true;
-        script.src = '{{asset('js')}}/cdn.shopify.com/s/trekkie.storefront.6967fb130a629a5a38a7939e6f3366da4c6e3e41.min.js';
+        script.src = "{{asset('js')}}/cdn.shopify.com/s/trekkie.storefront.6967fb130a629a5a38a7939e6f3366da4c6e3e41.min.js";
         first.parentNode.insertBefore(script, first);};
       trekkie.load(
         { "Trekkie": { "appName": "storefront", "development": false, "defaultAttributes": { "shopId": 43719131293, "isMerchantRequest": null, "themeId": 111512715421, "themeCityHash": "9493815741955898051", "contentLanguage": "en", "currency": "USD" }, "isServerSideCookieWritingEnabled": true }, "Session Attribution": {}, "S2S": { "facebookCapiEnabled": false, "source": "trekkie-storefront-renderer" } }

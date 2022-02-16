@@ -49,7 +49,7 @@
     </div>
     <div class="col cl_pr_title tc">
       <h3 class="product-title pr fs__16 mg__0 fwm"><a class="cd chp"
-          href="{{route('productdetails')}}">Blue Cotton Leggings</a></h3>
+          href="{{route('details',['id'=>1])}}">Blue Cotton Leggings</a></h3>
       <div id="price_qs"><span class="price "><span class=money>$30.00</span></span></div>
     </div>
   </div>
@@ -187,7 +187,7 @@
           <form method="post" action="/contact#contact_form" id="contact_form" accept-charset="UTF-8"
             class="frm_notify w_100">
             <input type="hidden" name="form_type" value="contact" />
-            <input type="hidden" name="utf8" value="✓" />
+            <!-- <input type="hidden" name="utf8" value="✓" /> -->
             <p class="cd fwsb mt__15 mb__10 fs__14">Thông báo cho tôi khi sản phẩm này có sẵn:</p>
             <div class="row">
               <div class="col-12 mb__20">
@@ -209,7 +209,7 @@
       </div>
     </div>
     <!--qs_swatch-->
-    <a href="{{route('productdetails')}}" class="btn fwsb detail_link dib mt__15"
+    <a href="{{route('details',['id'=>1])}}" class="btn fwsb detail_link dib mt__15"
       >Xem chi tiết đầy đủ <i class="facl facl-right"></i></a>
   </div>
 </div>

@@ -2,7 +2,7 @@
   <span class="tc nt_labels pa pe_none cw">
     <span class="onsale nt_label">
       <span>-25%</span></span></span>
-  <a href="{{route('productdetails')}}" data-linkhref class="db">
+  <a href="{{route('details',['id'=>1])}}" data-linkhref class="db">
     <div class="pr_lazy_img main-img nt_img_ratio lazyload nt_bg_lz" data-id="18121590177949"
       data-bgset="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-44_973e9674-d323-4e80-8eed-5918e9a54e49_1x1.jpg?v=1595905329"
       data-parent-fit="width" data-wiis data-ratio="0.6811989100817438" data-sizes="auto"></div>
@@ -16,7 +16,7 @@
 
 <div class="hover_button op__0 tc pa flex column ts__03">
   <div class="nt_add_w ts__03 ">
-    <a href="{{route('productdetails')}}" data-no-instant data-id="5427724026013"
+    <a href="{{route('details',['id'=>1])}}" data-no-instant data-id="5427724026013"
       class="wishlistadd cb chp ttip_nt tooltip_left" rel="nofollow">
       <span class="tt_txt">Thêm vào danh sách yêu thích</span>
         <i class="facl facl-heart-o"></i>
@@ -37,7 +37,7 @@
       <button type="button" class="minus db cb pa pd__0 pl__15 tl l__0">
         <i class="facl facl-minus"></i></button></div>
   </div>
-  <a href="{{route('productdetails')}}" data-id="35335226720413"
+  <a href="{{route('details',['id'=>1])}}" data-id="35335226720413"
     class="pr_atc_ tc dib js_addtc ttip_nt tooltip_left truncate" rel="nofollow">
     <span class="tt_txt">Thêm vào giỏ hàng</span>
     <i class="iccl iccl-cart"></i>

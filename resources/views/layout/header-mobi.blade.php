@@ -26,7 +26,7 @@
           <span class="iconbtns">Yêu thích</span></a></li>
       <!-- <li id="item_mb_sea" class="menu-item item-level-0 menu-item-btns menu-item-sea push_side"
         data-id="#nt_search_canvas">
-        <a href="{{route('menu-mn')}}"><span class="iconbtns">Tìm kiếm</span></a></li> -->
+        <a href="{{route('menu-mb')}}"><span class="iconbtns">Tìm kiếm</span></a></li> -->
       <li id="item_mb_acc" class="menu-item item-level-0 menu-item-btns menu-item-acount">
         <a href="{{route('view-login')}}" class="push_side" data-id="#nt_login_canvas">
           <span class="iconbtns">Đăng nhập / Đăng ký</span></a></li>

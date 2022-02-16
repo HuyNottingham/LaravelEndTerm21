@@ -22,7 +22,7 @@
           </div>
           <div class="product-info mt__15">
             <h3 class="product-title pr fs__14 mg__0 fwm">
-              <a href="{{route('productdetails')}}"
+              <a href="{{route('details',['id'=>1])}}"
                 class="cd chp">Blue Cotton Leggings</a></h3>
             <span class="price dib mb__5"><span class=money>$30.00</span></span>
             <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyload"

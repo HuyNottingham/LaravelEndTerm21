@@ -1108,137 +1108,91 @@
         </div>
       </div>
     </div>
-    <style>
-      .sticky_atc_wrap {
-        z-index: 340;
-        box-shadow: 0 0 9px rgba(0, 0, 0, .12);
-        transition: -webkit-transform .25s ease;
-        transition: transform .25s ease;
-        transition: transform .25s ease, -webkit-transform .25s ease;
-        -webkit-transform: translate3d(0, 100%, 0);
-        transform: translate3d(0, 100%, 0)
-      }
 
-      .sticky_atc_wrap.sticky_atc_shown {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0)
-      }
-
-      .sticky_atc_thumb {
-        min-height: 75px;
-      }
-
-      .sticky_atc_thumb img {
-        max-height: 75px;
-        max-width: 65px;
-        width: auto
-      }
-
-      .sticky_atc_a {
-        font-size: 13px;
-        cursor: pointer
-      }
-
-      .sticky_atc_btn .quantity {
-        border-radius: 2px;
-        border-color: #ddd
-      }
-
-      .sticky_atc_btn .single_add_to_cart_button {
-        border-radius: 2px;
-        box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .15)
-      }
-
-      .sticky_atc_info>h4 {
-        color: #222
-      }
-
-      .sticky_atc_price {
-        font-size: 16px
-      }
-
-      .sticky_atc_price ins {
-        text-decoration: none
-      }
-
-      #nt_backtop.sticky_atc_shown {
-        bottom: 105px
-      }
-
-      .popup_slpr_wrap.sticky_atc_shown {
-        bottom: 105px
-      }
-
-      @media (max-width:1024px) {
-        .gecko_toolbar_true .sticky_atc_wrap {
-          bottom: 55px
-        }
-
-        .gecko_toolbar_true #nt_backtop.sticky_atc_shown,
-        .gecko_toolbar_true .popup_slpr_wrap.sticky_atc_shown {
-          bottom: 160px
-        }
-      }
-
-      @media (max-width: 767px) {
-        .sticky_atc_content {
-          display: none
-        }
-
-        .sticky_atc_btn .txt_under {
-          display: block;
-          font-size: 14px
-        }
-
-        #nt_backtop.sticky_atc_shown {
-          bottom: 70px
-        }
-
-        .gecko_toolbar_true #nt_backtop.sticky_atc_shown,
-        .gecko_toolbar_true .popup_slpr_wrap.sticky_atc_shown {
-          bottom: 130px
-        }
-
-        .popup_slpr_wrap.sticky_atc_shown {
-          bottom: 75px
-        }
-      }
-
-      @media (max-width:575px) {
-        .sticky_atc_btn .txt_under {
-          width: 100%;
-          min-width: 100%;
-          margin: 0 0 10px
-        }
-
-        .sticky_atc_price {
-          display: none
-        }
-
-        .sticky_atc_btn {
-          -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-          -ms-flex-positive: 1;
-          flex-grow: 1;
-          max-width: 100%;
-          padding: 0 2px
-        }
-
-        .sticky_atc_btn .single_add_to_cart_button {
-          width: 100%;
-          margin: 0;
-          -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-          -ms-flex-positive: 1;
-          flex-grow: 1;
-          max-width: 100%
-        }
-
-        .sticky_atc_btn .quantity {
-          margin-left: 0
-        }
-      }
-    </style>
+<style>
+  .sticky_atc_wrap {
+    z-index:340;
+    box-shadow:0 0 9px rgba(0, 0, 0, .12);
+    transition:-webkit-transform .25s ease;
+    transition:transform .25s ease;
+    transition:transform .25s ease, -webkit-transform .25s ease;
+    -webkit-transform:translate3d(0, 100%, 0);
+    transform:translate3d(0, 100%, 0)}
+  .sticky_atc_wrap.sticky_atc_shown {
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)}
+  .sticky_atc_thumb {
+    min-height:75px}
+  .sticky_atc_thumb img {
+    max-height:75px;
+    max-width:65px;
+    width:auto}
+  .sticky_atc_a {
+    font-size:13px;
+    cursor:pointer}
+  .sticky_atc_btn .quantity {
+    border-radius:2px;
+    border-color:#ddd}
+  .sticky_atc_btn .single_add_to_cart_button {
+    border-radius:2px;
+    box-shadow:inset 0 -2px 0 rgba(0, 0, 0, .15)}
+  .sticky_atc_info>h4 {
+    color:#222}
+  .sticky_atc_price {
+    font-size:16px}
+  .sticky_atc_price ins {
+    text-decoration:none}
+  #nt_backtop.sticky_atc_shown {
+    bottom:105px}
+  .popup_slpr_wrap.sticky_atc_shown {
+    bottom:105px}
+  @media (max-width:1024px) {
+    .gecko_toolbar_true .sticky_atc_wrap {
+      bottom:55px}
+    .gecko_toolbar_true #nt_backtop.sticky_atc_shown,
+    .gecko_toolbar_true .popup_slpr_wrap.sticky_atc_shown {
+      bottom:160px}
+  }
+  @media (max-width:767px) {
+    .sticky_atc_content {
+      display:none}
+    .sticky_atc_btn .txt_under {
+      display:block;
+      font-size:14px}
+    #nt_backtop.sticky_atc_shown {
+      bottom:70px}
+    .gecko_toolbar_true #nt_backtop.sticky_atc_shown,
+    .gecko_toolbar_true .popup_slpr_wrap.sticky_atc_shown {
+      bottom:130px}
+    .popup_slpr_wrap.sticky_atc_shown {
+      bottom:75px}
+  }
+  @media (max-width:575px) {
+    .sticky_atc_btn .txt_under {
+      width:100%;
+      min-width:100%;
+      margin:0 0 10px}
+    .sticky_atc_price {
+      display:none}
+    .sticky_atc_btn {
+      -ms-flex-preferred-size:0;
+      flex-basis:0;
+      -ms-flex-positive:1;
+      flex-grow:1;
+      max-width:100%;
+      padding:0 2px}
+    .sticky_atc_btn .single_add_to_cart_button {
+      width:100%;
+      margin:0;
+      -ms-flex-preferred-size:0;
+      flex-basis:0;
+      -ms-flex-positive:1;
+      flex-grow:1;
+      max-width:100%}
+    .sticky_atc_btn .quantity {
+      margin-left:0}
+  }
+</style>
   </div>
 
   <div id="shopify-section-toolbar_mobile" class="shopify-section">

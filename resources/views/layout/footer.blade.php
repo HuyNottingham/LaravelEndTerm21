@@ -23,7 +23,7 @@
             <p><i class="pegk pe-7s-mail"></i><span> <a
                    href="mailto:huyltrn21@gmail.com">huyltrn21@gmail.com</a></span></p>
             <p><i class="pegk pe-7s-call"></i> <span>+001 2233 456 </span></p>
-            <div class="nt-social border_ black_">
+            <!-- <div class="nt-social border_ black_">
               <a href="https://facebook.com/shopify" rel="noopener noreferrer nofollow"
                 target="_blank" class="facebook cb ttip_nt tooltip_top" data-no-instant>
                 <span class="tt_txt">Theo dõi trên Facebook</span>
@@ -48,7 +48,7 @@
                 target="_blank" class="youtube cb ttip_nt tooltip_top" data-no-instant>
                 <span class="tt_txt">Theo dõi trên YouTube</span>
                 <i class="facl facl-youtube-play"></i></a>
-            </div>
+            </div> -->
 
            </div>
          </div>
@@ -74,34 +74,33 @@
        </div>
        <div class="col-lg-2 col-md-6 col-12 mb__50 order-lg-3 order-1">
         <aside id="block_1581507828337" class="widget widget_nav_menu">
-         <h3 class="widget-title fwsb flex al_center fl_between fs__16 mg__0 mb__30"><span
-               class="txt_title">THÔNG TIN</span><span class="nav_link_icon ml__5"></span></h3>
+         <h3 class="widget-title fwsb flex al_center fl_between fs__16 mg__0 mb__30">
+           <span class="txt_title">THÔNG TIN</span>
+           <span class="nav_link_icon ml__5"></span></h3>
          <div class="menu_footer widget_footer">
            <ul class="menu">
             <!-- <li class="menu-item">
               <a href="pages/about-us/indexfe6e.html?preview_theme_id=">Giới thiệu</a></li> -->
             <li class="menu-item"><a href="{{route('contact')}}">Liên hệ</a></li>
-            <li class="menu-item"><a href="{{route('terms-conditions')}}">Điều khoản & điều kiện</a></li>
+            <li class="menu-item"><a href="{{route('terms-conditions')}}">Điều khoản & Điều kiện</a></li>
             <!-- <li class="menu-item"><a href="{{route('shop')}}">Shipping & Delivery</a></li> -->
-            <li class="menu-item"><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
+            <li class="menu-item"><a href="{{route('privacy-policy')}}">Chính sách bảo mật</a></li>
            </ul>
          </div>
         </aside>
        </div>
        <div class="col-lg-2 col-md-6 col-12 mb__50 order-lg-4 order-1">
         <aside id="block_1581507840818" class="widget widget_nav_menu">
-         <h3 class="widget-title fwsb flex al_center fl_between fs__16 mg__0 mb__30"><span
-               class="txt_title">LINK HỮU ÍCH</span><span class="nav_link_icon ml__5"></span></h3>
+          <h3 class="widget-title fwsb flex al_center fl_between fs__16 mg__0 mb__30">
+            <span class="txt_title">LINK HỮU ÍCH</span>
+            <span class="nav_link_icon ml__5"></span></h3>
          <div class="menu_footer widget_footer">
            <ul class="menu">
             <li class="menu-item"><a href="{{route('contact')}}">Địa chỉ cửa hàng</a></li>
             <li class="menu-item"><a href="{{route('contact')}}">Tin mới nhất</a></li>
             <li class="menu-item"><a href="{{route('account')}}">Tài khoản của tôi</a></li>
-            <li class="menu-item"><a href="{{route('contact')}}">Hướng dẫn chọn size</a></li>
-            <!-- <li class="menu-item"><a href="blogs/portfolio/indexfe6e.html?preview_theme_id=">Portfolio</a></li>
-            <li class="menu-item"><a href="pages/faqs/indexfe6e.html?preview_theme_id=">FAQs</a> -->
-            </li>
-           </ul>
+            <li class="menu-item"><a href="{{route('size-guide')}}">Hướng dẫn chọn size</a></li>
+            </li></ul>
          </div>
         </aside>
        </div>
@@ -120,8 +119,8 @@
               <div class="mc4wp-form-fields">
                 <div class="signup-newsletter-form row no-gutters pr oh ">
                   <div class="col col_email">
-                    <input type="email" name="contact[email]"
-                      placeholder="Email của bạn" class="input-text" required></div>
+                    <input type="email" name="email" placeholder="Email của bạn"
+                      class="input-text" style="padding:0 3px 2px 15px" required></div>
                   <div class="col-auto">
                     <button type="submit" class="btn_new_icon_false w__100 submit-btn truncate">
                       Đăng ký</button>

@@ -10,7 +10,7 @@
       </div>
       <div class="product-info mt__15">
         <h3 class="product-title pr fs__14 mg__0 fwm">
-          <a class="cd chp" href="{{route('productdetails')}}">Cuffed Chino Shorts</a></h3>
+          <a class="cd chp" href="{{route('details',['id'=>1])}}">Cuffed Chino Shorts</a></h3>
           <span class="price dib mb__5">
             <del><span class=money>$25.00</span></del>
             <ins><span class=money>$20.00</span></ins></span>

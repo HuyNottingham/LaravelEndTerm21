@@ -35,18 +35,18 @@
 
         <div id="CustomerLoginForm">
           <h2>Đăng nhập</h2>
-          <form method="post" action="" id="customer_login"
-                accept-charset="UTF-8" novalidate="novalidate">
-            <!-- <input type="hidden" name="form_type" value="customer_login" />
-            <input type="hidden" name="utf8" value="✓" /> -->
+          <form method="post" id="customer_login" accept-charset="UTF-8">
+            @csrf
+            <input type="hidden" name="form_type" value="login" />
+            <!-- <input type="hidden" name="utf8" value="✓" /> -->
             <p class="form-row">
               <label for="CustomerEmail">Email <span class="required">*</span></label>
-              <input type="email" name="customer[email]" id="CustomerEmail"
-                autocomplete="email" autocorrect="off" autocapitalize="off">
+              <input type="email" name="email" id="CustomerEmail"
+                autocomplete="email" autocorrect="off" autocapitalize="off" required>
             </p>
             <p class="form-row">
               <label for="CustomerPassword">Mật khẩu <span class="required">*</span></label>
-              <input type="password" name="customer[password]" id="CustomerPassword">
+              <input type="password" name="password" id="CustomerPassword" required>
             </p>
             <p><a href="#recover" data-no-instant rel="nofollow" id="RecoverPassword">Quên mật khẩu?</a></p>
             <input type="submit" class="btn js_add_ld" value="Đăng nhập">
@@ -56,13 +56,14 @@
         <div id="RecoverPasswordForm" class="hide">
           <h2>Đặt lại mật khẩu của bạn</h2>
           <p>Quên mật khẩu? Hãy điền địa chỉ email của bạn. Bạn sẽ nhận được một liên kết để tạo mật khẩu mới qua email.</p>
-          <form method="post" action="{{route('recover')}}" accept-charset="UTF-8">
-            <!-- <input type="hidden" name="form_type" value="recover_customer_password" />
-            <input type="hidden" name="utf8"  value="✓" /> -->
+          <form method="post" accept-charset="UTF-8">
+            @csrf
+            <input type="hidden" name="form_type" value="recover" />
+            <!-- <input type="hidden" name="utf8"  value="✓" /> -->
             <p class="form-row">
               <label for="RecoverEmail">Địa chỉ email</label>
               <input type="email" name="email" id="RecoverEmail" class="input-full"
-                autocorrect="off" autocapitalize="off">
+                autocorrect="off" autocapitalize="off" required>
             </p>
             <input type="submit" class="btn js_add_ld" value="Đặt lại mật khẩu">
             <br><a href="#LoginHeading" data-no-instant rel="nofollow" class="button mt__15"
@@ -74,29 +75,30 @@
       <div class="col-12 col-md-6 divCreateForm login-form mb__60">
         <div id="CustomerRegisterForm">
           <h2>Đăng ký</h2>
-          <form method="post" action="{{route('regis')}}"
-            id="RegisterForm" accept-charset="UTF-8" novalidate>
-            <!-- <input type="hidden" name="form_type" value="create_customer" />
-            <input type="hidden" name="utf8" value="✓" /> -->
+          <form method="post" id="RegisterForm" accept-charset="UTF-8">
+             <!-- action="{ {route('regis')}}" -->
+            @csrf
+            <input type="hidden" name="form_type" value="regis" />
+            <!-- <input type="hidden" name="utf8" value="✓" /> -->
             <p class="form-row">
               <label for="RegisterForm-FirstName">Họ</label>
-              <input type="text" name="customer[first_name]"
+              <input type="text" name="first_name"
                 id="RegisterForm-FirstName" autocomplete="given-name">
             </p>
             <p class="form-row">
               <label for="RegisterForm-LastName">Tên</label>
-              <input type="text" name="customer[last_name]"
+              <input type="text" name="last_name"
                 id="RegisterForm-LastName" autocomplete="family-name">
             </p>
             <p class="form-row">
               <label for="RegisterForm-email">Email <span class="required">*</span></label>
-              <input type="email" name="customer[email]"
-                id="RegisterForm-email" autocorrect="off"
+              <input type="email" name="email"
+                id="RegisterForm-email" autocorrect="off" required
                 autocapitalize="off" autocomplete="email" aria-required="true">
             </p>
             <p class="form-row">
               <label for="RegisterForm-password">Mật khẩu <span class="required">*</span></label>
-              <input type="password" name="customer[password]"
+              <input type="password" name="password" required
                 id="RegisterForm-password" aria-required="true">
             </p>
             <input type="submit" value="Đăng ký" class="btn js_add_ld">

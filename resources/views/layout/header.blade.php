@@ -88,7 +88,7 @@
       <div class="col-lg-auto col-md-4 col-3 tr col_group_btns">
         <div class="nt_action in_flex al_center cart_des_1">
           <a class="icon_search push_side cb chp"
-            data-id="#nt_search_canvas" href="{{route('menu-mn')}}" title="Chua co trang search chinh thuc">
+            data-id="#nt_search_canvas" href="{{route('menu-mb')}}" title="Chua co trang search chinh thuc">
             <i class="iccl iccl-search"></i></a>
 
           <a class="icon_like cb chp pr dn db_md" href="{{route('wishlist')}}">

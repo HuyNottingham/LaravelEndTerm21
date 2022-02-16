@@ -10,6 +10,7 @@ use App\Models\Category;
 
 class WishlistController extends Controller{
     function i(){
+        return view('client.wishlist');
         $wishlist = WishlistView::where('user_id', $_COOKIE['id'])
                 ->get();
         $cart = CartView::where('user_id', $_COOKIE['id'])

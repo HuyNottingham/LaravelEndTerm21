@@ -29,43 +29,44 @@
       </div>
     </div>
   </div>
-  <div class="container mt__100 mb__100">
+  <div class="container mt__40 mb__100">
     <div class="row fl_center">
       <div class="contact-form col-12 col-md-6 mb__20">
         <form method="post" action="https://gecko5.myshopify.com/contact#contact_form_page"
           id="contact_form_page" accept-charset="UTF-8" class="contact-form">
-          <input type="hidden" name="form_type" value="contact" />
-          <input type="hidden" name="utf8" value="✓" />
+          <!-- <input type="hidden" name="form_type" value="contact" /> -->
+          <!-- <input type="hidden" name="utf8" value="✓" /> -->
 
-          <h3 class="mb__20">DROP US A LINE</h3>
+          <h3 class="mb__20">GỬI MỘT LÁ THƯ</h3>
           <p>
-            <label for="contact_form_page-name">Your Name (required)</label>
-            <input required="required" type="text" id="contact_form_page-name" name="contact[name]" value="">
+            <label for="contact_form_page-name">*Họ Tên</label>
+            <input  name="name"type="text" id="contact_form_page-name" required value="">
           </p>
           <p>
-            <label for="contact_form_page-email">Your Email (required)</label>
-            <input required="required" type="email" id="contact_form_page-email" name="contact[email]"
-              autocorrect="off" autocapitalize="off" value="" aria-required="true" required="required">
+            <label for="contact_form_page-email">*Email</label>
+            <input name="email" type="email" id="contact_form_page-email"
+              autocorrect="off" autocapitalize="off" aria-required="true" required value="">
           </p>
           <p>
-            <label for="contact_form_page-phone">Your Phone Number</label>
-            <input type="tel" id="contact_form_page-phone" name="contact[phone]" pattern="[0-9\-]*" value="">
+            <label for="contact_form_page-phone">Số điện thoại</label>
+            <input name="phone" type="tel" id="contact_form_page-phone" pattern="[0-9\-]*" value="">
           </p>
           <p>
-            <label for="contact_form_page-message">Your Message</label>
-            <textarea rows="20" id="contact_form_page-message" name="contact[body]" required="required"></textarea>
+            <label for="contact_form_page-message">Nội dung thư</label>
+            <textarea name="message" rows="20" id="contact_form_page-message" required></textarea>
           </p>
-          <input type="submit" class="button w__100" value="Send">
+          <input type="submit" class="button w__100" value="Gửi">
         </form>
       </div>
       <div class="contact-content col-12 col-md-6">
-        <h3 class="mb__20">CONTACT INFORMATION</h3>
-        <p>We love to hear from you on our customer service, merchandise, website or any topics you want to share
-          with us. Your comments and suggestions will be appreciated. Please complete the form below.</p>
-        <p><i class="las la-home fs__16"></i> 184 Main Rd E, St Albans Victoria 3021, Australia</p>
-        <p><i class="las la-phone fs__16"></i> 1800-123-222 / 1900-1570-230</p>
-        <p><i class="las la-envelope fs__16"></i> contact@company.com</p>
-        <p><i class="las la-clock fs__16"></i> Everyday 9:00-17:00</p>
+        <h3 class="mb__20">THÔNG TIN LIÊN HỆ</h3>
+        <p>Chúng tôi muốn nghe ý kiến của bạn về dịch vụ khách hàng, sản phẩm,
+          trang web của chúng tôi hoặc bất kỳ chủ đề nào bạn muốn chia sẻ với chúng tôi.
+          Ý kiến và đề xuất của bạn sẽ được đánh giá cao.</p>
+        <p><i class="las la-home fs__16"></i> 25T2 Nguyễn Thị Thập, Cầu Giấy, Hà Nội</p>
+        <p><i class="las la-phone fs__16"></i> 1900-1530</p>
+        <p><i class="las la-envelope fs__16"></i> huyltrn21@gmail.com</p>
+        <p><i class="las la-clock fs__16"></i> 8:00-20:00 mỗi ngày</p>
       </div>
     </div>
   </div>

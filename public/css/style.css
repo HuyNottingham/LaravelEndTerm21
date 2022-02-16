@@ -2523,7 +2523,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
 .profile_info .profile_info_iner{
   position:absolute;
   right:0;
-  background-color:rgb(207 233 236 /0.5);
+  background-color:rgb(233 246 247/95%);
   text-align:right;
   width:215px;
   padding:30px 30px 20px;
@@ -2546,7 +2546,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
   top:-15px;
   right:15px;
   border-width:0 15px 15px 15px;
-  border-color:transparent transparent rgb(207 233 236 /0.5) transparent}
+  border-color:transparent transparent rgb(233 246 247/95%) transparent}
 
 /* line 216, H:/admin_project/hospital/scss/_header.scss */
 .profile_info .profile_info_iner a{
@@ -2589,10 +2589,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child::befor
 
 /* line 252, H:/admin_project/hospital/scss/_header.scss */
 .profile_info .profile_info_details i{
-  /* color:#cccccc; */
+  color:#000;
   font-size:20px;
   margin-left:15px;
-  -webkit-transition:0.5s;
+  /* -webkit-transition:0.5s; */
   transition:0.5s}
 
 /* line 260, H:/admin_project/hospital/scss/_header.scss */
@@ -3327,7 +3327,7 @@ table.dataTable{
 
 /* line 477, H:/admin_project/hospital/scss/_sidebar.scss */
 .sidebar::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb{
-  background-color:#f8dbdd}
+  background-color:#c8eaef}
 
 /* line 483, H:/admin_project/hospital/scss/_sidebar.scss */
 body::-webkit-scrollbar{
@@ -6846,11 +6846,10 @@ td.p30{
   padding:10px}
 [name="password"] + span .material-iconsremove_red_eye.closed:after {
   content:"";
-  width:1px;
   height:22px;
   transform:rotate(-40deg);
   background-color:#000;
   box-shadow:0 0 0 2px #fff;
   position:absolute;
-  right:22px}
+  right:23px}
 /*# sourceMappingURL=style.css.map */

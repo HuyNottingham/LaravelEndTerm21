@@ -59,13 +59,13 @@
           @for($i=1; $i<=2; $i++)
           <div class="row mb__10 pb__10">
             <div class="col widget_img_pr">
-              <a class="db pr oh" href="{{route('productdetails')}}">
+              <a class="db pr oh" href="{{route('details',['id'=>1])}}">
                 <img src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20750%201101%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
                   data-src="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-46_1a4bbde3-f6bf-47e7-a830-ff8b7616c644_{width}x.jpg?v=1595905285"
                   data-widths="[80, 160, 320, 640]" data-sizes="auto" class="w__100 lazyload lz_op_ef"
                   alt="Blue Cotton Leggings"></a></div>
             <div class="col widget_if_pr">
-              <a href="{{route('productdetails')}}" class="product-title db"
+              <a href="{{route('details',['id'=>1])}}" class="product-title db"
                 >Blue Cotton Leggings</a>
               <span class=money>$30.00</span></div>
           </div>
@@ -73,13 +73,13 @@
               Dưới: giảm giá -->
           <div class="row mb__10 pb__10">
             <div class="col widget_img_pr">
-              <a href="{{route('productdetails')}}" class="db pr oh">
+              <a href="{{route('details',['id'=>1])}}" class="db pr oh">
                 <img src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%20750%201101%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3C%2Fsvg%3E"
                   data-src="//cdn.shopify.com/s/files/1/0437/1913/1293/products/m-12_8f3d8497-a3c0-4f95-b5f6-88c85ee39b8e_{width}x.jpg?v=1595905303"
                   data-widths="[80, 160, 320, 640]" data-sizes="auto" class="w__100 lazyload lz_op_ef"
                   alt="Cyan Cuffed Chino Shorts"></a></div>
             <div class="col widget_if_pr">
-              <a href="{{route('productdetails')}}" class="product-title db"
+              <a href="{{route('details',['id'=>1])}}" class="product-title db"
                 >Cyan Cuffed Chino Shorts</a>
               <del><span class=money>$25.00</span></del>
               <ins><span class=money>$20.00</span></ins>

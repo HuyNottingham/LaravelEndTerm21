@@ -112,7 +112,7 @@
 
         @for($i=0;$i<=5;$i++)
           <div data-page=""
-                class="col-lg-4 col-md-3 col-6 pr_animated done mt__30 pr_grid_item product nt_pr desgin__1">
+            class="col-lg-4 col-md-3 col-6 pr_animated done mt__30 pr_grid_item product nt_pr desgin__1">
             <div class="product-inner pr">
               <div class="product-image pr oh lazyload"
                 data-include="<?php echo ($i>2) ? route('products-view=imgtrue') : route('products-view=imgtrue2'); ?>">
@@ -121,7 +121,7 @@
               </div>
               <div class="product-info mt__15">
                 <h3 class="product-title pr fs__14 mg__0 fwm"><a class="cd chp"
-                    href="collections/clothing/products/blue-cotton-leggings.html">Blue Cotton Leggings</a>
+                    href="{{route('details',['id'=>1])}}">Blue Cotton Leggings</a>
                 </h3>
                 <span class="price dib mb__5"><span class="money">$30.00</span>
                 </span>
@@ -216,7 +216,7 @@
                     </div>
                     <div class="product-info mt__15">
                       <h3 class="product-title pr fs__14 mg__0 fwm">
-                        <a class="cd chp" href="collections/clothing/products/blue-cotton-leggings.html">
+                        <a class="cd chp" href="{{route('details',['id'=>1])}}">
                           Blue Cotton Leggings</a></h3>
                       <span class="price dib mb__5"><span class="money">$30.00</span></span>
                       <div class="swatch__list_js swatch__list lh__1 nt_swatches_on_grid lazyload"

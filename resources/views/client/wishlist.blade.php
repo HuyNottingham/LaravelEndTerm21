@@ -82,7 +82,7 @@
                   data-currentinclude="">
                   <div class="pr oh">
                     <span class="tc nt_labels pa pe_none cw"></span>
-                    <a href="{{route('productdetails')}}" data-linkhref="" class="db">
+                    <a href="{{route('details',['id'=>1])}}" data-linkhref="" class="db">
                       <div class="pr_lazy_img main-img nt_img_ratio nt_bg_lz lazyloaded"
                         data-bgset="//cdn.shopify.com/s/files/1/0437/1913/1293/products/p-41_ded061b9-35d1-4574-8f0a-476316933a0b_180x.jpg?v=1595905307 180w, //cdn.shopify.com/s/files/1/0437/1913/1293/products/p-41_ded061b9-35d1-4574-8f0a-476316933a0b_360x.jpg?v=1595905307 360w, //cdn.shopify.com/s/files/1/0437/1913/1293/products/p-41_ded061b9-35d1-4574-8f0a-476316933a0b_540x.jpg?v=1595905307 540w, //cdn.shopify.com/s/files/1/0437/1913/1293/products/p-41_ded061b9-35d1-4574-8f0a-476316933a0b_720x.jpg?v=1595905307 720w, //cdn.shopify.com/s/files/1/0437/1913/1293/products/p-41_ded061b9-35d1-4574-8f0a-476316933a0b_900x.jpg?v=1595905307 900w, //cdn.shopify.com/s/files/1/0437/1913/1293/products/p-41_ded061b9-35d1-4574-8f0a-476316933a0b_1080x.jpg?v=1595905307 1080w"
                         data-id="18121587196061" data-parent-fit="width" data-wiis=""
@@ -119,22 +119,22 @@
                   </div>
                   <div class="hover_button op__0 tc pa flex column ts__03">
                     <div class="nt_add_w ts__03 ">
-                      <a href="{{route('productdetails')}}" rel="nofollow"
+                      <a href="{{route('details',['id'=>1])}}" rel="nofollow"
                         data-no-instant="" data-id="5427723600029"
                         class="cb chp ttip_nt tooltip_left wis_remve">
                         <span class="tt_txt">Xóa danh sách yêu thích</span>
                         <i class="facl facl-heart-o"></i></a>
                     </div>
-                    <a href="{{route('productdetails')}}" rel="nofollow"
+                    <a href="{{route('quick_view')}}" rel="nofollow"
                       class="nt_add_qv js_add_qv dib ttip_nt tooltip_left"
-                      data-id="5427723600029">
+                      data-id="5427725959325">
                       <span class="tt_txt">Xem nhanh</span>
                       <i class="iccl iccl-eye"></i></a>
                   </div>
                   <div class="product-attr pa ts__03 cw op__0 tc">
                     <p class="truncate mg__0 w__100">XS, S, M, L, XL</p>
                   </div>
-                  <a href="{{route('productdetails')}}" rel="nofollow" data-id="5427723600029"
+                  <a href="{{route('quick_shop')}}" rel="nofollow" data-id="5427725959325"
                     class="pr_atc pa l__0 r__0 b__0 op__0 pe_none tc dib js__qs ttip_nt tooltip_left truncate">
                     <span class="tt_txt">Mua ngay</span>
                     <i class="iccl iccl-cart"></i>
@@ -143,7 +143,7 @@
                 <div class="product-info">
                   <div class="product-info__inner">
                     <h3 class="product-title pr fs__14 mg__0 fwm">
-                      <a href="{{route('productdetails')}}" class="cd chp"
+                      <a href="{{route('details',['id'=>1])}}" class="cd chp"
                         >Black Cotton Leggings</a></h3>
                     <span class="price dib mb__5">
                       <span class="money">$30.00</span></span>
@@ -175,11 +175,11 @@
                     </div>
                   </div>
                   <div class="product-info__btns flex column mt__20">
-                    <a href="{{route('productdetails')}}" rel="nofollow"
+                    <a href="{{route('quick_view')}}" rel="nofollow"
                       class="nt_add_qv js_add_qv dib ttip_nt_" data-id="5427723600029">
                       <span class="tt_txt">Xem nhanh</span>
                       <i class="iccl iccl-eye"></i></a>
-                    <a href="{{route('productdetails')}}" rel="nofollow"
+                    <a href="{{route('quick_shop')}}" rel="nofollow"
                       class="pr_atc pa l__0 r__0 b__0 op__0 pe_none tc dib js__qs ttip_nt_ truncate"
                       data-id="5427723600029">
                       <span class="tt_txt">Mua ngay</span>
